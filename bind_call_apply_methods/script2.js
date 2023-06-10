@@ -4,3 +4,6 @@ console.log('--- apply() Method ---');
 numbers.push.apply(numbers, moreNumbers);
 console.log(`Appended array: ${numbers}`)
 
+a = 8
+console.log(a)
+let a;
