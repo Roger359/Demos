@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/58adac63e1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+   <section>
+    <div class="container">
+      <div class="calc">
+        <h2>Tip Calculator</h2>
+        <form action="">
+          <div>
+            <label for="">Bill</label>
+            <input type="text" class="bill" placeholder="$">
+          </div>
+          <div>
+            <label for="">Rate Service:</label>
+            <select name="" class="rate">
+              <option value="0" disabled selected> 
+                --Select and option--
+              </option>
+              <option value="0.15">15% - Excellent</option>
+              <option value="0.1">10% - good</option>
+              <option value="0.05">5% - Fair</option>
+            </select>
+          </div>
+          <button type="button" class="btn">Calculate</button>
+          <p class="error">Please enter bill and rate service.</p>
+        </form>
+        <div class="result">
+          <p class="tip">Tip Amount: $0</p>
+          <p class="total">Total Amount: $0</p>
+        </div>
+      </div>
+    </div>
+   </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
