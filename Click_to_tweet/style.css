@@ -22,4 +22,17 @@ body {
 }
 
 
+.container {
+  height: 100vh;
+}
 
+.btn{
+  background-color: rgb(29, 155, 240) !important;
+  min-height: 32px;
+  color: var(--white) !important;
+
+}
+
+p{
+  font-size: 20px !important;
+}
