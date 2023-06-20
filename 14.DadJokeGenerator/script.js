@@ -3,13 +3,10 @@
 const btn = document.querySelector(".btn");
 const jokeEl = document.getElementById("joke");
 
-
-const apiKey = config.MY_KEY
-
 const options = {
   method: "GET",
   headers: {
-    "X-Api-Key": apiKey,
+    "X-Api-Key": config.MY_KEY,
   },
 };
 
