@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Generators</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/58adac63e1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Random Generator</h1>
+    </header>
+
+    <main>
+      <!-- Container for Random Numbers -->
+      <div class="container-numbers container">
+        <div class="counter-div">
+          <h2 class="heading">Random Number</h2>
+          <span class="count number">0</span>
+
+          <div class="buttons">
+            <button class="numberBtn btn">
+              <i class="fas fa-spinner"> Generate </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Random Strings -->
+      <div class="container-strings container">
+        <div class="counter-div">
+          <h2 class="heading">Random String</h2>
+          <span class="count string">safhgejkwre</span>
+
+          <div class="buttons">
+            <button class="stringBtn btn">
+              <i class="fas fa-spinner"> Generate </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Random Hexcolor  -->
+      <div class="container-hexcolor container">
+        <div class="counter-div">
+          <h2 class="heading">Random HexColor</h2>
+          <span class="count hex">#ffffff</span>
+
+          <div class="buttons">
+            <button class="btnHex btn">
+              <i class="fas fa-spinner"> Generate </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Random Quotes -->
+      <div class="container-quotes container">
+        <h2 class="heading">Random Quote</h2>
+        <h3 class="quote">
+          <i class="fa-solid fa-quote-left"></i>
+          <span id="quote">Quote</span>
+          <i class="fa-solid fa-quote-right"></i>
+        </h3>
+        <p class="author">~ Author</p>
+        <button class="quoteBtn btn">Get a quote</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
