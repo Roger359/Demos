@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script type="text/javascript" src="config.js"></script>
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
 
     <main>
       <!-- Container for Random Numbers -->
-      <div class="container-numbers container">
+      <div class="container">
         <div class="counter-div">
           <h2 class="heading">Random Number</h2>
           <span class="count number">0</span>
@@ -36,7 +37,7 @@
       </div>
 
       <!-- Container for Random Strings -->
-      <div class="container-strings container">
+      <div class="container">
         <div class="counter-div">
           <h2 class="heading">Random String</h2>
           <span class="count string">safhgejkwre</span>
@@ -50,7 +51,7 @@
       </div>
 
       <!-- Container for Random Hexcolor  -->
-      <div class="container-hexcolor container">
+      <div class="container container-hexcolor">
         <div class="counter-div">
           <h2 class="heading">Random HexColor</h2>
           <span class="count hex">#ffffff</span>
@@ -64,7 +65,7 @@
       </div>
 
       <!-- Container for Random Quotes -->
-      <div class="container-quotes container">
+      <div class="container">
         <h2 class="heading">Random Quote</h2>
         <h3 class="quote">
           <i class="fa-solid fa-quote-left"></i>
@@ -73,6 +74,33 @@
         </h3>
         <p class="author">~ Author</p>
         <button class="quoteBtn btn">Get a quote</button>
+      </div>
+
+      <!-- Container for Random Anime Pics -->
+      <div class="container">
+        <h3 class="heading">Anime Pics Generator</h3>
+        <button class="animeBtn btn">Get Anime</button>
+        <div class="anime-container">
+          <img
+            class="anime-img"
+            src="https://www.mundodeportivo.com/urbantecno/hero/2022/06/Descubre-cuales-son-las-mejores-webs-para-ver-anime.jpg?width=768&aspect_ratio=16:9&format=nowebp"
+            alt=""
+          />
+          <h3 class="anime-name">Anime Name</h3>
+        </div>
+      </div>
+      <!-- Dad jokes generator -->
+      <div class="container">
+        <h1 class="heading">
+          Dad Joke Generator
+        </h1>
+        
+        <p class="joke" id="joke">
+          Dad Joke
+        </p>
+        <button class="jokesBtn btn" id="jokesBtn">Tell me a joke</button>
+        
+    
       </div>
     </main>
 

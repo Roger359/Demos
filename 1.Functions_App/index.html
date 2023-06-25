@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/58adac63e1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header><h1>Function Apps</h1></header>
+    <main>
+      <!-- Counter app -->
+
+      <div class="container">
+        <div class="counter-div">
+          <h2 class="heading">Counter App</h2>
+          <span class="count">0</span>
+
+          <div class="buttons">
+            <button class="subtract">
+              <i class="fas fa-arrow-down"> Subtract </i>
+            </button>
+            <button class="reset">
+              <i class="fas fa-spinner"> Reset </i>
+            </button>
+            <button class="add">
+              <i class="fas fa-arrow-up"> Add </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for Palindrome Checker -->
+      <div class="container pal">
+        <input
+          type="text"
+          class="input-text-palindrome"
+          placeholder="Enter a word"
+        />
+        <button class="palBtn">Check</button>
+        <p class="palResult"></p>
+      </div>
+
+      <!-- Container for Vowel Counter -->
+      <div class="container pal">
+        <input
+          type="text"
+          class="input-text-vowels"
+          placeholder="Enter a word"
+        />
+        <button class="vowelBtn">Check</button>
+        <p class="vowelResult"></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
