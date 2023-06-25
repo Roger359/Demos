@@ -14,48 +14,56 @@
   <body>
     <header><h1>Function Apps</h1></header>
     <main>
-      <!-- Counter app -->
+      <section>
+        <!-- Counter app -->
 
-      <div class="container">
-        <div class="counter-div">
-          <h2 class="heading">Counter App</h2>
-          <span class="count">0</span>
+        <div class="container">
+          <div class="counter-div">
+            <h2 class="heading">Counter App</h2>
+            <span class="count">0</span>
 
-          <div class="buttons">
-            <button class="subtract">
-              <i class="fas fa-arrow-down"> Subtract </i>
-            </button>
-            <button class="reset">
-              <i class="fas fa-spinner"> Reset </i>
-            </button>
-            <button class="add">
-              <i class="fas fa-arrow-up"> Add </i>
-            </button>
+            <div class="buttons">
+              <button class="subtract">
+                <i class="fas fa-arrow-down"> Subtract </i>
+              </button>
+              <button class="reset">
+                <i class="fas fa-spinner"> Reset </i>
+              </button>
+              <button class="add">
+                <i class="fas fa-arrow-up"> Add </i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Container for Palindrome Checker -->
-      <div class="container pal">
-        <input
-          type="text"
-          class="input-text-palindrome"
-          placeholder="Enter a word"
-        />
-        <button class="palBtn">Check</button>
-        <p class="palResult"></p>
-      </div>
+      <section>
+        <div class="container pal">
+          <h2 class="heading">Palindrome Checker</h2>
+          <input
+            type="text"
+            class="input-text-palindrome"
+            placeholder="Enter a word"
+          />
+          <button class="palBtn">Check</button>
+          <p class="palResult"></p>
+        </div>
+      </section>
 
       <!-- Container for Vowel Counter -->
-      <div class="container pal">
-        <input
-          type="text"
-          class="input-text-vowels"
-          placeholder="Enter a word"
-        />
-        <button class="vowelBtn">Check</button>
-        <p class="vowelResult"></p>
-      </div>
+      <section>
+        <div class="container pal">
+          <h2 class="heading">Vowel Counter</h2>
+          <input
+            type="text"
+            class="input-text-vowels"
+            placeholder="Enter a word"
+          />
+          <button class="vowelBtn">Check</button>
+          <p class="vowelResult"></p>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
