@@ -1,34 +1,61 @@
+//  VARIABLES
+
 // Random number generator
 const number = document.querySelector(".number");
 const numberBtn = document.querySelector(".numberBtn");
+
+//Random string generator
+const string = document.querySelector(".string"),
+  stringBtn = document.querySelector(".stringBtn");
+
+//Random Hex Color Generator
+const hex = document.querySelector(".hex");
+const btnHex = document.querySelector(".btnHex");
+
+// random quote generator
+const apiQuoteUrl = "https://api.quotable.io/random";
+const quoteBtn = document.querySelector(".quoteBtn"),
+  quoteElement = document.querySelector("#quote"),
+  author = document.querySelector(".author");
+
+// Random anime pics
+const apiAnimeUrl = "https://api.waifu.pics/sfw/waifu";
+const animeBtn = document.querySelector(".animeBtn"),
+  animeContainer = document.querySelector(".anime-container"),
+  animeImg = document.querySelector(".anime-img"),
+  animeName = document.querySelector(".anime-name");
+
+// dad jokes generator
+const jokesBtn = document.querySelector(".jokesBtn");
+const jokeEl = document.getElementById("joke");
+const apiJokesUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
+const options = {
+  method: "GET",
+  headers: {
+    "X-Api-Key": config.MY_KEY,
+  },
+};
+
+// Random Emoji Generator
+const emojiBtn = document.getElementById("emoji-btn"),
+  emoji_Name = document.getElementById("emoji-name");
+const emoji = [];
+const emojiUrl = `https://emoji-api.com/emojis?access_key=${config.Key2}`;
+
+// FUNCTIONS
 
 const generateNumber = () => {
   // generate number between 1 and 10
   const rand = Math.floor(Math.random() * 100 + 1);
   number.innerHTML = rand;
 };
-
-numberBtn.addEventListener("click", generateNumber);
 generateNumber();
-
-// const rand = Math.floor(Math.random() * 10 + 1);
-// console.log(rand);
-
-//Random string generator
-const string = document.querySelector(".string"),
-  stringBtn = document.querySelector(".stringBtn");
 
 const generateString = () => {
   const randomString = Math.random().toString(36).slice(2);
   string.innerText = randomString;
 };
-stringBtn.addEventListener("click", generateString);
-
 generateString();
-
-//Random Hex Color Generator
-const hex = document.querySelector(".hex");
-const btnHex = document.querySelector(".btnHex");
 
 const generateColor = () => {
   //generate the random chex color
@@ -42,22 +69,7 @@ const generateColor = () => {
   hexContainer.style.backgroundColor = randomColorConcat;
   hex.innerHTML = randomColorConcat;
 };
-
-btnHex.addEventListener("click", generateColor);
-
 generateColor();
-
-// let color = Math.random()
-// color = Math.random().toString(16);
-// color = Math.random().toString(16).substring(2, 8);
-// console.log(color)
-
-// random quote generator
-const quoteBtn = document.querySelector(".quoteBtn"),
-  quoteElement = document.querySelector("#quote"),
-  author = document.querySelector(".author");
-
-const apiQuoteUrl = "https://api.quotable.io/random";
 
 const getQuote = async () => {
   try {
@@ -80,17 +92,7 @@ const getQuote = async () => {
     quoteBtn.disabled = false;
   }
 };
-
 getQuote();
-quoteBtn.addEventListener("click", getQuote);
-
-// Random anime pics
-const animeBtn = document.querySelector(".animeBtn"),
-  animeContainer = document.querySelector(".anime-container"),
-  animeImg = document.querySelector(".anime-img"),
-  animeName = document.querySelector(".anime-name");
-
-const apiAnimeUrl = "https://api.waifu.pics/sfw/waifu";
 
 const getAnime = async () => {
   try {
@@ -99,34 +101,18 @@ const getAnime = async () => {
     animeImg.src = "spinner.svg";
     const response = await fetch(apiAnimeUrl);
     const data = await response.json();
-    console.log(data);
 
     animeBtn.disabled = false;
     animeBtn.innerText = "Get Anime";
 
     animeContainer.style.display = "block";
     animeImg.src = data.url;
-    animeName.innerText = "unknow";
   } catch (error) {
     animeBtn.disabled = false;
     animeBtn.innerText = "Get anime";
-    animeName.innerText = "An error happend, try again later";
   }
 };
 getAnime();
-animeBtn.addEventListener("click", getAnime);
-
-// dad jokes generator
-const jokesBtn = document.querySelector(".jokesBtn");
-const jokeEl = document.getElementById("joke");
-const apiJokesUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
-
-const options = {
-  method: "GET",
-  headers: {
-    "X-Api-Key": config.MY_KEY,
-  },
-};
 
 async function getJoke() {
   try {
@@ -148,5 +134,38 @@ async function getJoke() {
     jokeEl.innerText = "An Error happened, try again latter";
   }
 }
-getJoke()
+getJoke();
+
+async function getEmoji() {
+  let response = await fetch(emojiUrl);
+  let data = await response.json();
+
+  for (let i = 0; i < 1500; i++) {
+    emoji.push({
+      emojiName: data[i].character,
+      emojiCode: data[i].unicodeName,
+    });
+  }
+
+  // console.log(emoji)
+}
+getEmoji();
+// EVENTS
+numberBtn.addEventListener("click", generateNumber);
+
+stringBtn.addEventListener("click", generateString);
+
+btnHex.addEventListener("click", generateColor);
+
+quoteBtn.addEventListener("click", getQuote);
+
+animeBtn.addEventListener("click", getAnime);
+
 jokesBtn.addEventListener("click", getJoke);
+
+emojiBtn.addEventListener("click", () => {
+  const randomNumber = Math.floor(Math.random() * emoji.length);
+
+  emojiBtn.innerText = emoji[randomNumber].emojiName;
+  emoji_Name.innerText = emoji[randomNumber].emojiCode;
+});

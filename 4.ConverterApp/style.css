@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+
+body {
+  background: linear-gradient(
+    to right bottom,
+    var(--dark-grey),
+    var(--light-blue)
+  );
+  /* border: 2px solid red; */
+}
+
+.heading {
+  font-size: 4.2rem;
+  margin: 1rem;
+  color: var(--color-sec);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem;
+}
+
+.container {
+  width: 50%;
+  /* border: 2px solid red; */
+  background-color: var(--grey);
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+.mb-3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.input::placeholder {
+  color: var(--color-sec) !important;
+  font-weight: 600;
+}
+
+/*  Currency convertor styles */
+.currency-container {
+  background-color: darkcyan;
+  color: aliceblue;
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.currencies {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currencies select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 50%;
+  font-size: 1.8rem;
+}
+
+.currencies input {
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  text-align: center;
+  color: yellow;
+  font-weight: 700;
+}
+
+.exchange-rate{
+  font-size: 2rem;
+  font-weight: 700;
+  color: aliceblue;
+
+}
+
+select:focus,
+input:focus{
+  outline: 0;
+
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  h1.heading {
+    font-size: 3rem;
+  }
+}
