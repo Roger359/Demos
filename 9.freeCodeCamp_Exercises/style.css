@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #db6400;
+  --color-sec: #9d0191;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    to left bottom,
+    var(--dark-grey),
+    var(--blue),
+    var(--dark-grey)
+  );
+  border: 2px solid red;
+
+}
+header {
+  font-size: 2rem;
+  color: var(--grey);
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid yellow;
+}
+section {
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+ul{
+list-style: none;
+display: flex;
+flex: row;
+justify-content: center;
+align-items: center;
+font-size: 1.5rem;
+font-weight: 600;
+}
+
+.turn{
+  padding: 1.5rem;
+  margin: .3rem;
+  border-radius: 4px;
+  background-color: var(--grey);
+}
+
+.heading {
+  font-size: 2.2rem;
+  margin: 1rem;
+  color: var(--dark-grey);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  margin: 1rem 1rem;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid red;
+}
+
+
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--dark-grey);
+  color: var(--grey);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 4rem;
+}
+
+.btn:hover {
+  margin: 1rem;
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease;
+  border: var(--color-primary);
+}
+
+.standInLine{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--dark-grey);
+  padding: 2rem 3.2rem; 
+}
