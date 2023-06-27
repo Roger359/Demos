@@ -80,7 +80,10 @@ form {
   justify-content: space-between;
   align-items: center;
 }
-
+p.alert{
+  font-size: 1.4rem;
+  color: var(--black);
+}
 .currencies select {
   padding: 0.5rem;
   border-radius: 5px;
