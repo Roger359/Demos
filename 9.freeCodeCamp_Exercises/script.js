@@ -24,3 +24,15 @@ standBtn.addEventListener("click", (e) => {
   let turnPosition = nextInLine(testArr, testArr[0]);
   standInLine.innerText = turnPosition;
 });
+
+// Extract Domain Name from an email
+const emailBtn = document.querySelector(".emailBtn");
+const domainResult = document.querySelector('.domainResult')
+
+emailBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const emailInput = document.querySelector(".input-email").value;
+
+  let getDomain = emailInput.substring(emailInput.indexOf("@") + 1);
+  domainResult.innerText = getDomain
+});
