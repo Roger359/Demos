@@ -17,19 +17,6 @@
           <h2 class="heading">Stand in Line</h2>
           <button class="stand-btn btn">Next turn</button>
           <p class="standInLine">1</p>
-          
-
-            <ul class="turns">
-              <li class="turn active" value="1">1</li>
-              <li class="turn" value="2">2</li>
-              <li class="turn" value="3">3</li>
-              <li class="turn" value="4">4</li>
-              <li class="turn" value="5">5</li>
-              <li class="turn" value="6">6</li>
-              <li class="turn" value="7">7</li>
-              <li class="turn" value="8">8</li>
-              <li class="turn" value="9">9</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -42,6 +29,27 @@
 
           <button class="emailBtn btn">Extract Domain</button>
           <p class="domainResult">cpven.com</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2 class="heading">Fibonacci with For Loop</h2>
+          <code class="code">
+            const fibonacci = n => {
+              const fib = [0, 1]
+            
+              for(let i = 2; i <= n; i++ ){
+                fib[i] = fib[i - 1] + fib[i - 1]
+              }
+              return fib[n]
+            }
+          </code>
+
+          <input type="number" class="input-fibo" placeholder="Enter a number" />
+
+          <button class="fiboBtn btn">Calculate</button>
+          <p class="fiboResult">0</p>
         </div>
       </section>
     </main>
