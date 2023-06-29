@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #db6400;
+  --color-sec: #9d0191;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    to left bottom,
+    var(--dark-grey),
+    var(--blue),
+    var(--dark-grey)
+  );
+}
+
+main {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  font-size: 2rem;
+  color: var(--grey);
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+
+section {
+  padding: 2rem;
+  /* border: 2px solid red; */
+ width: 500px;
+
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 800;
+  color: darkcyan;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 5px;
+  background-color: var(--grey);
+}
+
+input {
+  width: 100%;
+  border: none;
+  color: var(--color-primary);
+  outline: none;
+  border-bottom: 3px solid var(--color-primary);
+  padding: 1rem 5px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin: 1rem;
+  color: var(--dark-grey);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid red;
+}
+
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--dark-grey);
+  color: var(--grey);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 4rem;
+  width: 100%;
+}
+
+.btn:hover {
+  margin: 1rem;
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease;
+  border: var(--color-primary);
+}
