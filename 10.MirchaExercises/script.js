@@ -25,6 +25,10 @@ const reverseStringResult = document.querySelector(".reverseStringResult");
 const numbersOfWordsBtn = document.querySelector(".numbersOfWords-btn");
 const numbersOfWordsResult = document.querySelector(".numbersOfWordsResult");
 
+// Palindrome variables
+const palBtn = document.querySelector(".pal-btn");
+const palRersult = document.querySelector(".palResult");
+
 // Functions
 
 const countCharacters = (string = "") => {
@@ -38,29 +42,36 @@ const countCharacters = (string = "") => {
 
 const cutWords = (text = "", newLength = undefined) => {
   if (newLength > text.length) {
-    return "The new length has to be less than the original one."
-    
+    return "The new length has to be less than the original one.";
   }
-  if (isString(text) && !text || !newLength) {
-    return  "Did not enter the values";
+  if ((isString(text) && !text) || !newLength) {
+    return "Did not enter the values";
   } else {
     return `${text.slice(0, newLength)}`;
   }
 };
 
-const splitString = (text, separator) => {
-  if (isString(text) && isString(separator)) {
-    console.log(text.split(separator));
-    return text.split(separator);
+const splitString = (text, separator = " ") => {
+  if (isString(text) && !text) {
+    return "Did not enter the values";
+  } else {
+    return text.split(" ");
   }
 };
 
 const repeatStrings = (text, times) => {
-  if (isString(text) && isNumber(times)) {
-    const result = text.repeat(times);
-    console.log(result);
-    return result;
+  if (times === 0) return "The times parameter can't be 0";
+
+  if (Math.sign(times) === -1) return "Negative numbers its not allowed";
+
+  if (!isString(text) && !isNumber(times)) {
+    return "The string or the times is not datatype allowed";
   }
+
+  const result = text.repeat(times);
+  console.log(result.split(","));
+
+  return result;
 };
 
 const reverseString = (text) => {
@@ -72,9 +83,32 @@ const reverseString = (text) => {
 };
 
 function countingWords(str, word) {
-  if (isString(str) && isString(word)) {
-    // console.log(str.split(' ').filter(item => item === word).length)
-    return str.split(" ").filter((word) => word === str).length;
+  if (!isString(str)) {
+    return "Its not a string";
+  } else {
+    return str.split(" ").filter((item) => item == word).length;
+  }
+}
+
+function palindrome() {
+  const word = document.querySelector(".palString").value;
+
+  let wordLength = word.length;
+
+  let startWord = word.substring(0, Math.floor(wordLength / 2)).toLowerCase();
+  let endWord = word
+    .substring(wordLength - Math.floor(wordLength / 2))
+    .toLowerCase();
+
+  // let flipEndWord = endWord.split('').reverse().join('')
+
+  //using spread operator to reverse a word.
+  let flipEndWord = [...endWord].reverse().join("");
+
+  if (startWord === flipEndWord) {
+    palRersult.innerHTML = `${word.toUpperCase()}  is a palindrome`;
+  } else {
+    palRersult.innerHTML = `${word.toUpperCase()}  is NOT a palindrome`;
   }
 }
 // events
@@ -105,7 +139,11 @@ repeatStringBtn.addEventListener("click", () => {
   let times = document.getElementById("repeatTimes").value;
   times = Number(times);
 
-  repeatStringResult.innerText = repeatStrings(string, times);
+  for(let i = 1; i <= times; i++){
+    repeatStringResult.innerText = `${string}, ${i}`
+  }
+
+  // repeatStringResult.innerText = repeatStrings(string, times);
 });
 
 reverseStringBtn.addEventListener("click", () => {
@@ -119,3 +157,5 @@ numbersOfWordsBtn.addEventListener("click", () => {
   console.log(countingWords(string, word));
   numbersOfWordsResult.innerText = countingWords(string, word);
 });
+
+palBtn.addEventListener("click", palindrome);
