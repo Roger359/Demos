@@ -14,7 +14,7 @@
       <!-- String counter-->
       <section>
         <div class="container">
-          <h2 class="heading">String counter</h2>
+          <h2 class="heading">1. String counter</h2>
           <input
             type=""
             class="stringInput"
@@ -27,7 +27,10 @@
       <!-- Cut words  -->
       <section>
         <div class="container">
-          <h2 class="heading">Cut Words</h2>
+          <div class="internal-header">
+            <h2 class="heading">2. Cut Words</h2>
+          </div>
+
           <input
             type="text"
             class="wordToCut"
@@ -38,7 +41,7 @@
             type="number"
             class="valueToCut"
             id="valueToCut"
-            placeholder="Enter the value"
+            placeholder="Enter a number"
           />
           <button class="wordToCut-btn btn">Cut</button>
           <p class="wordToCutResult">0</p>
@@ -47,19 +50,14 @@
       <!-- Split String  -->
       <section>
         <div class="container">
-          <h2 class="heading">Split String</h2>
+          <h2 class="heading">3. Split Strings</h2>
           <input
             type="text"
             class="splitString"
             id="splitString"
             placeholder="Enter the string"
           />
-          <input
-            type="text"
-            class="separator"
-            id="separator"
-            placeholder="Enter the separator"
-          />
+
           <button class="splitString-btn btn">Split</button>
           <p class="splitStringResult"></p>
         </div>
@@ -68,7 +66,9 @@
       <!-- Repeat String  -->
       <section>
         <div class="container">
-          <h2 class="heading">Repeat String</h2>
+          <div class="internal-header">
+            <h2 class="heading">4. Repeat String</h2>
+          </div>
           <input
             type="text"
             class="repeatString"
@@ -88,7 +88,7 @@
       <!-- reverse String  -->
       <section>
         <div class="container">
-          <h2 class="heading">Reverse String</h2>
+          <h2 class="heading">5. Reverse String</h2>
           <input
             type="text"
             class="reverseString"
@@ -104,7 +104,7 @@
       <!-- Number of repetitions in a long text  -->
       <section>
         <div class="container">
-          <h2 class="heading">Counting words</h2>
+          <h2 class="heading">6. Counting words</h2>
           <input
             type="text"
             class="numbersOfWords"
@@ -123,10 +123,10 @@
         </div>
       </section>
 
-       <!-- Palindrome Checker   -->
-       <section>
+      <!-- Palindrome Checker   -->
+      <section>
         <div class="container">
-          <h2 class="heading">Palindrome Checker</h2>
+          <h2 class="heading">7. Palindrome Checker</h2>
           <input
             type="text"
             class="palString"
@@ -134,8 +134,126 @@
             placeholder="Enter the string"
           />
 
-          <button class="pal-btn btn">Reverse</button>
+          <button class="pal-btn btn">Check</button>
           <p class="palResult"></p>
+        </div>
+      </section>
+      <!-- Delete Certain string of words  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">8. Delete Specific Words</h2>
+          <input
+            type="text"
+            class="deleteOfWords"
+            id="deleteOfWords"
+            placeholder="Enter the string"
+          />
+          <input
+            type="text"
+            class="specificWord"
+            id="specificWord"
+            placeholder="Enter the string"
+          />
+
+          <button class="deleteWord-btn btn">Delete</button>
+          <p class="wordDeletedResult">0</p>
+        </div>
+      </section>
+      <!-- Random number by ranges -->
+      <section>
+        <div class="container">
+          <h2 class="heading">9. Random Number</h2>
+          <input
+            type="number"
+            class="minValue"
+            placeholder="Enter the min value to iterate"
+          />
+          <input
+            type="number"
+            class="maxValue"
+            placeholder="Enter the max value to iterate"
+          />
+
+          <button class="randomNumber-btn btn">Iterate</button>
+          <p class="randomNumberResult">0</p>
+        </div>
+      </section>
+      <!-- Evaluate a capicua -->
+      <section>
+        <div class="container">
+          <h2 class="heading">10. Capicua Checker</h2>
+          <input
+            type="number"
+            class="capicuaNumber"
+            placeholder="Enter the value to check"
+          />
+
+          <button class="capicuaNumber-btn btn">Check</button>
+          <p class="capicuaNumberResult">0</p>
+        </div>
+      </section>
+      <!-- Factorial Number -->
+      <section>
+        <div class="container">
+          <h2 class="heading">11. Calculate Factorial number</h2>
+          <p>6! : 1 x 2 x 3 x 4 x 5 x 6 = 720</p>
+          <input
+            type="number"
+            class="factorialNumber"
+            placeholder="Enter the value to factorize"
+          />
+
+          <button class="factorialNumber-btn btn">Check</button>
+          <p class="factorialNumberResult">0</p>
+        </div>
+      </section>
+      <!-- Odd Number function-->
+      <section>
+        <div class="container">
+          <h2 class="heading">12. Odd Number Checker</h2>
+          <input
+            type="number"
+            class="oddNumber"
+            placeholder="Enter the value to Check"
+          />
+
+          <button class="oddNumber-btn btn">Check</button>
+          <p class="oddNumberResult">0</p>
+        </div>
+      </section>
+      <!-- even Number function-->
+      <section>
+        <div class="container">
+          <h2 class="heading">13. Even Number Checker</h2>
+          <input
+            type="number"
+            class="evenNumber"
+            placeholder="Enter the min value to iterate"
+          />
+
+          <button class="evenNumber-btn btn">Check</button>
+          <p class="evenNumberResult">0</p>
+        </div>
+      </section>
+      <!-- Celsius to Fahrenheit-->
+      <section>
+        <div class="container">
+          <h2 class="heading">14. Celsius to Fahrenheit</h2>
+          <input
+            type="number"
+            class="grade"
+            name="grade"
+            placeholder="Enter the grade"
+          />
+
+          <select name="unity" id="unity">
+            <option class="unity">Select...</option>
+            <option value="C" class="unity">C</option>
+            <option value="F" class="unity">F</option>
+          </select>
+
+          <button class="gradesNumber-btn btn">Check</button>
+          <p class="gradesNumberResult">0</p>
         </div>
       </section>
     </main>

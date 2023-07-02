@@ -37,7 +37,6 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  /* max-width: 1400px; */
   margin: 0 auto;
   padding: 2rem;
 }
@@ -52,10 +51,9 @@ header {
 }
 
 section {
-  padding: 2rem;
+  padding: 1rem;
   /* border: 2px solid red; */
- width: 500px;
-
+  min-height: 60vh;
 }
 
 p {
@@ -70,7 +68,8 @@ p {
   background-color: var(--grey);
 }
 
-input {
+input,
+select {
   width: 100%;
   border: none;
   color: var(--color-primary);
@@ -81,17 +80,20 @@ input {
   text-align: center;
 }
 
+
 .heading {
   font-size: 2.5rem;
   margin: 1rem;
   color: var(--dark-grey);
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-weight: 600;
+  /* border: 2px solid red; */
 }
 
 .container {
   width: 100%;
-  max-width: 500px;
+  min-width: 500px;
+  min-height: 600px;
   border-radius: 10px;
   padding: 3rem;
   display: flex;
@@ -104,6 +106,8 @@ input {
   text-align: center;
   border: 2px solid red;
 }
+
+
 
 .btn {
   margin: 1rem;
@@ -125,4 +129,28 @@ input {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   transition: all 400ms ease;
   border: var(--color-primary);
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  .container {
+    width: 100%;
+    min-width: 0;
+    padding: 0 4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 0.1rem;
+  }
 }
