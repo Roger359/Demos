@@ -380,14 +380,14 @@
       <section>
         <div class="container">
           <h2 class="heading">18. Vowel&Consonants Counter</h2>
-          
+
           <input
             type="text"
             class="stringToCount"
             id="stringToCount"
             placeholder="Enter the string"
           />
-         
+
           <button class="stringToCount-btn btn">Count</button>
           <p class="stringToCountVowels">0</p>
           <p class="stringToCountConsts">0</p>
@@ -398,14 +398,14 @@
       <section>
         <div class="container">
           <h2 class="heading">19. Name checkers</h2>
-          
+
           <input
             type="text"
             class="stringToCheck"
             id="stringToCheck"
             placeholder="Enter the string"
           />
-         
+
           <button class="stringToCheck-btn btn">Check</button>
           <p class="stringToCheckResult">...</p>
         </div>
@@ -415,24 +415,24 @@
       <section>
         <div class="container">
           <h2 class="heading">20. Email Checker</h2>
-          
+
           <input
             type="text"
             class="emailToCheck"
             id="emailToCheck"
             placeholder="Enter the string"
           />
-         
+
           <button class="emailToCheck-btn btn">Check</button>
           <p class="emailToCheckResult">...</p>
         </div>
       </section>
 
-      <!-- Email checker  -->
+      <!-- Email and name checker  -->
       <section>
         <div class="container">
           <h2 class="heading">20. Email Checker and Name checker</h2>
-          
+
           <input
             type="text"
             class="stringRegToCheck"
@@ -442,12 +442,120 @@
 
           <select name="regExpPattern" id="regExpPattern">
             <option class="unity">Select...</option>
-            <option value="/^[A-Za-zÑñ\s]+$/g" class="unity">Name Checker</option>
-            <option value="/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i" class="unity">Email Checker</option>
+            <option value="^[A-Za-zÑñ\s]+$">Name Checker</option>
+            <option
+              value="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})"
+            >
+              Email Checker
+            </option>
           </select>
-         
+
           <button class="stringRegToCheck-btn btn">Check</button>
+          <p class="regExpUsed">...</p>
           <p class="stringRegToCheckResult">...</p>
+        </div>
+      </section>
+      <!-- Array Exponential new array -->
+      <section>
+        <div class="container">
+          <h2 class="heading">21. Array Exponential new array</h2>
+
+          <input
+            type="text"
+            class="arrayToPow"
+            id="arrayToPow"
+            placeholder="Enter the Array"
+          />
+
+          <button class="arrayToPow-btn btn">Check</button>
+          <p class="arrayToPowResult">...</p>
+          
+        </div>
+      </section>
+      <!-- Array Max value and min value checker  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">22. Array Max value and min value checker</h2>
+
+          <input
+            type="text"
+            class="arrayMaxMinValue"
+            id="arrayMaxMinValue"
+            placeholder="Enter the Array"
+          />
+
+          <button class="arrayMaxMinValue-btn btn">Get-Max-Min</button>
+          <p class="arrayMaxMinValueResult">...</p>
+          
+        </div>
+      </section>
+      <!-- Array group of objects with odd and even numbers -->
+      <section>
+        <div class="container">
+          <h2 class="heading">23. Odd and Even array Grouping</h2>
+
+          <input
+            type="text"
+            class="arrayOfOddValues"
+            id="arrayOfOddValues"
+            placeholder="Enter the Array"
+          />
+
+          <button class="arrayOfOddValues-btn btn">Sort</button>
+          <p class="arrayOfOddValuesResult">...</p>
+          
+        </div>
+      </section>
+      <!-- Sort two arrays into an object desc and ascendent way-->
+      <section>
+        <div class="container">
+          <h2 class="heading">24. Sorting Arrays</h2>
+
+          <input
+            type="text"
+            class="sortingArrayValues"
+            id="sortingArrayValues"
+            placeholder="Enter the Array"
+          />
+
+          <button class="sortingArrayValues-btn btn">Sort</button>
+          <p class="sortingArrayValuesResult">...</p>
+          
+        </div>
+      </section>
+
+      <!-- Remove Duplicate values inside my Array-->
+      <section>
+        <div class="container">
+          <h2 class="heading">25. Remove duplicate values in an array</h2>
+
+          <input
+            type="text"
+            class="deleteArrayValues"
+            id="deleteArrayValues"
+            placeholder="Enter the Array"
+          />
+
+          <button class="deleteArrayValues-btn btn">Sort</button>
+          <p class="deleteArrayValuesResult">...</p>
+          
+        </div>
+      </section>
+      <!-- Average of the Array -->
+      <section>
+        <div class="container">
+          <h2 class="heading">26. Average Of the Array</h2>
+
+          <input
+            type="text"
+            class="arrayAverage"
+            id="arrayAverage"
+            placeholder="Enter the Array"
+          />
+
+          <button class="arrayAverage-btn btn">Check</button>
+          <p class="arrayAverageResult">...</p>
+          
         </div>
       </section>
     </main>

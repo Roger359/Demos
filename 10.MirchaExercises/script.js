@@ -81,7 +81,42 @@ const stringToCheckResult = document.querySelector(".stringToCheckResult");
 
 // Name checkers variables
 const stringRegToCheckBtn = document.querySelector(".stringRegToCheck-btn");
-const stringRegToCheckResult = document.querySelector(".stringRegToCheckResult");
+const stringRegToCheckResult = document.querySelector(
+  ".stringRegToCheckResult"
+);
+const regExpUsed = document.querySelector(".regExpUsed");
+
+// Arrao to pow variables
+const arrayToPowBtn = document.querySelector(".arrayToPow-btn");
+const arrayToPowResult = document.querySelector(".arrayToPowResult");
+
+// Array Max and Min value checker
+const arrayMaxMinValueBtn = document.querySelector(".arrayMaxMinValue-btn");
+const arrayMaxMinValueResult = document.querySelector(
+  ".arrayMaxMinValueResult"
+);
+
+// Odd and Even Grouping Arrays
+const arrayOfOddValuesBtn = document.querySelector(".arrayOfOddValues-btn");
+const arrayOfOddValuesResult = document.querySelector(
+  ".arrayOfOddValuesResult"
+);
+
+// Array Average Calculator
+const arrayAverageBtn = document.querySelector(".arrayAverage-btn");
+const arrayAverageResult = document.querySelector(".arrayAverageResult");
+
+// Sorting Arrays variables
+const sortingArrayValuesBtn = document.querySelector(".sortingArrayValues-btn");
+const sortingArrayValuesResult = document.querySelector(
+  ".sortingArrayValuesResult"
+);
+
+// Delete duplicate values in array
+const deleteArrayValuesBtn = document.querySelector(".deleteArrayValues-btn");
+const deleteArrayValuesResult = document.querySelector(
+  ".deleteArrayValuesResult"
+);
 
 // Functions
 
@@ -427,17 +462,137 @@ const nameChecker = (name) => {
     : `the ${name} its not a valid name`;
 };
 
-const stringNameEmailChecker = (string = "", pattern = "") => {
+const stringNameEmailChecker = (string = "", pattern = undefined) => {
   // if (!string) return "Did no enter a name";
   // if (typeof string !== "string") return "Its not a valid string";
+  console.log("pattern passed to the function", pattern, string);
 
   let regExp = pattern.test(string);
+  console.log(regExp);
 
   return regExp
-    ? `The string: ${string} is a valid`
-    : `the string: ${string} its not a valid string`;
+    ? `The string: ${string} is a valid format`
+    : `the string: ${string} its not a valid format`;
 };
 
+const arrayToPow = (array = undefined) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  if (array.length === 0) return "The array is empty";
+
+  let newArrayExp = [];
+  let p = 2;
+  for (let i = 0; i < array.length; i++) {
+    if (isNaN(array[i])) return "Its not a valid numbers array";
+    newArrayExp.push(Math.pow(array[i], p));
+  }
+
+  // let newArrayWithMapMethod = array.map(element => element * element)
+
+  return newArrayExp;
+};
+
+const getMaxMinValueInArray = (array = undefined) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  if (array.length === 0) return "The array is empty";
+
+  for (let num of array) {
+    if (isNaN(num)) return "Its not a valid numbers array";
+  }
+
+  console.log(array);
+  let maxValue = Math.max(...array);
+  let minValue = Math.min(...array);
+  console.log(maxValue);
+  return `The min value of the array passed is = ${minValue} and the Max value is = ${maxValue}`;
+};
+
+const getOddAndEvenNumbersFromArray = (array = undefined) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  for (let num of array) {
+    if (isNaN(num)) return "Its not a valid numbers array";
+  }
+
+  console.log("inside the function", array);
+  let divisibleOfOdd = false;
+  let divisibleOfEven = false;
+  let oddArrayNumber = [];
+  let evenArrayNumber = [];
+
+  // get odd numbers
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 1) {
+      divisibleOfOdd = true;
+      oddArrayNumber.push(array[i]);
+    }
+  }
+
+  // get even number
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      divisibleOfEven = true;
+      evenArrayNumber.push(array[i]);
+    }
+  }
+
+  console.log(oddArrayNumber, divisibleOfOdd);
+  console.log(evenArrayNumber, divisibleOfEven);
+
+  // using method filter
+  let newObject = {
+    odd: array.filter((num) => num % 2 === 1),
+    even: array.filter((num) => num % 2 === 0),
+  };
+  console.log(newObject);
+
+  return `Odd Numbers = ${newObject.odd} and Even numbers = ${newObject.even}`;
+};
+
+const sortingArrays = (array = undefined) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  for (let num of array) {
+    if (isNaN(num)) return "Its not a valid numbers array";
+  }
+
+  const objectsOfArrays = {
+    array,
+    ascendent: array.map((el) => el).sort((a, b) => a - b),
+    descendent: array
+      .map((el) => el)
+      .sort((a, b) => a - b)
+      .reverse(),
+  };
+
+  return `Convert the array = ${array} into a Ascendent Array = ${objectsOfArrays.ascendent} and Descendent Array is = ${objectsOfArrays.descendent}`;
+};
+
+const removeDuplicateValuesInArray = (array) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  for (let num of array) {
+    if (isNaN(num)) return "Its not a valid numbers array";
+  }
+
+  let newArray =  array.filter((item, index) => array.indexOf(item) === index)
+  console.log(newArray)
+  return `Remove duplicate values from = ${array}, new array without duplicate values = ${newArray}`
+}
+
+const getArrayAverage = (array = undefined) => {
+  if (!(array instanceof Array)) return "The value is not a Array";
+
+  if (array.length === 0) return "The array is empty";
+
+  for (let num of array) {
+    if (isNaN(num)) return "Its not a valid numbers array";
+  }
+
+  return `The Average value is = `;
+};
 // events
 
 stringInput.addEventListener("keyup", () => {
@@ -568,8 +723,115 @@ stringToCheckBtn.addEventListener("click", () => {
 });
 
 stringRegToCheckBtn.addEventListener("click", () => {
-  const string = document.querySelector(".emailToCheck").value;
-  const pattern = document.getElementById('regExpPattern').value
+  const string = document.querySelector(".stringRegToCheck").value;
+  console.log(string);
+  let pattern = document.getElementById("regExpPattern").value;
 
+  pattern = new RegExp(pattern);
+
+  console.log(`conversion to regExp = ${pattern}`);
+  regExpUsed.innerText = `The regular expression used is: ${pattern}`;
   stringRegToCheckResult.innerText = stringNameEmailChecker(string, pattern);
+});
+
+arrayToPowBtn.addEventListener("click", () => {
+  let array = document.querySelector(".arrayToPow").value;
+  if (array.length === 0)
+    return (sortingArrayValuesResult.innerText = "The array is empty");
+  let newArray = [];
+
+  array = array.split(",");
+
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(parseInt(array[i]));
+  }
+
+  console.log("converted string to array", newArray);
+
+  arrayToPowResult.innerHTML = `Array original ${newArray} new array pow is ${arrayToPow(
+    newArray
+  )}`;
+});
+
+arrayMaxMinValueBtn.addEventListener("click", () => {
+  let array = document.querySelector(".arrayMaxMinValue").value;
+  if (array.length === 0)
+    return (sortingArrayValuesResult.innerText = "The array is empty");
+  let newArray = [];
+  array = array.split(",");
+  console.log(array);
+
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(parseInt(array[i]));
+  }
+
+  console.log("converted string to array", newArray);
+
+  arrayMaxMinValueResult.innerText = getMaxMinValueInArray(newArray);
+});
+
+arrayOfOddValuesBtn.addEventListener("click", () => {
+  let array = document.querySelector(".arrayOfOddValues").value;
+  if (array.length === 0)
+    return (sortingArrayValuesResult.innerText = "The array is empty");
+
+  let newArray = [];
+  array = array.split(",");
+
+  console.log(array);
+
+  // converting to  numbers
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(parseInt(array[i]));
+  }
+  console.log("converted string to array", newArray);
+
+  arrayOfOddValuesResult.innerText = getOddAndEvenNumbersFromArray(newArray);
+});
+
+sortingArrayValuesBtn.addEventListener("click", () => {
+  let array = document.querySelector(".sortingArrayValues").value;
+  if (array.length === 0)
+    return (sortingArrayValuesResult.innerText = "The array is empty");
+
+  let newArray = [];
+  array = array.split(",");
+  console.log(array);
+
+  // converting to  numbers
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(parseInt(array[i]));
+  }
+  console.log("converted string to array", newArray);
+  sortingArrayValuesResult.innerText = sortingArrays(newArray);
+});
+
+deleteArrayValuesBtn.addEventListener("click", () => {
+  let array = document.querySelector(".deleteArrayValues").value;
+  if (array.length === 0)
+    return (deleteArrayValuesResult.innerText = "The array is empty");
+
+  let newArray = [];
+  array = array.split(",");
+  console.log(array);
+
+  // converting to  numbers
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(parseInt(array[i]));
+  }
+  console.log("converted string to array", newArray);
+  deleteArrayValuesResult.innerText = removeDuplicateValuesInArray(newArray);
+});
+
+arrayAverageBtn.addEventListener("click", () => {
+  let array = document.querySelector(".arrayAverage").value;
+  let sqr = [];
+  array = array.split(",");
+
+  for (let i = 0; i < array.length; i++) {
+    sqr.push(parseInt(array[i]));
+  }
+  console.log("converted string to array", sqr);
+
+  arrayAverageResult.innerText = getArrayAverage(array);
 });
