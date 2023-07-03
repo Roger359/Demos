@@ -58,6 +58,31 @@ const evenNumberResult = document.querySelector(".evenNumberResult");
 const gradesNumberBtn = document.querySelector(".gradesNumber-btn");
 const gradesNumberResult = document.querySelector(".gradesNumberResult");
 
+// binary to decimal
+const numberToConvertBtn = document.querySelector(".numberToConvert-btn");
+const numberToConvertResult = document.querySelector(".numberToConvertResult");
+
+// tip Calculator
+const tipBtn = document.querySelector(".tip-btn");
+const tipResult = document.querySelector(".tipResult");
+
+// date Functions variables
+const dateBtn = document.querySelector(".date-btn");
+const dateResult = document.querySelector(".dateResult");
+
+// vowel and consonants counter variables
+const stringToCountBtn = document.querySelector(".stringToCount-btn");
+const stringToCountVowels = document.querySelector(".stringToCountVowels");
+const stringToCountConsts = document.querySelector(".stringToCountConsts");
+
+// Name checkers variables
+const stringToCheckBtn = document.querySelector(".stringToCheck-btn");
+const stringToCheckResult = document.querySelector(".stringToCheckResult");
+
+// Name checkers variables
+const stringRegToCheckBtn = document.querySelector(".stringRegToCheck-btn");
+const stringRegToCheckResult = document.querySelector(".stringRegToCheckResult");
+
 // Functions
 
 const countCharacters = (string = "") => {
@@ -97,8 +122,13 @@ const repeatStrings = (text, times) => {
   if (!isString(text) && !isNumber(times)) {
     return "The string or the times is not datatype allowed";
   }
-
+  let textLength = text.length;
   const result = text.repeat(times);
+  const resultSplited = result.split("");
+
+  console.log(textLength);
+  console.log(result);
+  console.log(resultSplited);
   console.log(result.split(","));
 
   return result;
@@ -297,15 +327,121 @@ const convertTemperature = (grades = undefined, unity = undefined) => {
     return `${grades}"C = ${Math.round(grades * (9 / 5) + 32)}F`;
   } else if (unity === "F") {
     return `${grades}F = ${Math.round((grades - 32) * (5 / 9))}C`;
-  }else{
-    return 'Does Not Working'
+  } else {
+    return "Does Not Working";
   }
+};
+
+const binaryToDecimal = (number = undefined, baseType = undefined) => {
+  console.log(number, baseType);
+
+  if (number === undefined) return "Did not enter number to convert";
+  if (typeof Number(number) !== "number")
+    return "Did not enter a value of number type";
+
+  console.log(`inside the function ${number} and ${baseType}`);
+  if (baseType === 2) {
+    return `the number ${number}, base ${baseType} Binary = A number ${parseInt(
+      number,
+      baseType
+    )} base 10`;
+  } else if (baseType === 10) {
+    number = number.toString(baseType);
+    console.log(number);
+    return `the number ${number}, base ${baseType} Decimal = A number ${number} base 2`;
+  } else {
+    return "The base type its not valid";
+  }
+};
+
+const tipCalculator = (amount = undefined, tip = 0) => {
+  if (amount === undefined) return "Did not enter number to convert";
+  if (typeof amount !== "number") return "Did not enter a value of number type";
+
+  if (Math.sign(amount) === -1) return "number can be negative";
+
+  return `The tip is: ${amount} - ${tip}% = ${amount - (amount * tip) / 100}`;
+};
+
+const dateCalculator = (date) => {
+  console.log(date.getFullYear());
+
+  // if(!(date instanceof Date)) return 'Its not a valid date'
+
+  let today = new Date().getTime();
+  console.log(today);
+  let dateEntered = new Date(date).getTime();
+  console.log(dateEntered);
+
+  let todayLessThanDate = today - dateEntered;
+  console.log("today less date", todayLessThanDate);
+  let yearsInMs = 1000 * 60 * 60 * 24 * 365;
+
+  let humansYears = Math.floor(todayLessThanDate / yearsInMs);
+
+  return Math.sign(humansYears) === -1
+    ? `Missing ${Math.abs(humansYears)} years for the ${date.getFullYear()}`
+    : Math.sign(humansYears) === 1
+    ? ` ${humansYears} years have passed, since ${date.getFullYear()} `
+    : `There is not difference is the same name`;
+};
+
+const vowelConsonantsCounter = (string) => {
+  // if  return;
+
+  let vowelCounter = 0;
+  let consonantsCounter = 0;
+
+  let stringValue = string.toLowerCase();
+
+  for (let letter of stringValue) {
+    if (/[a,e,i,o,u]/.test(letter)) {
+      vowelCounter++;
+    } else {
+      consonantsCounter++;
+    }
+  }
+
+  // for (let i = 0; i < stringValue.length; i++) {
+  //   let letter = stringValue[i];
+
+  //   if (letter.match(/([a,e,i,o,u])/)) {
+  //     vowelCounter++;
+  //   } else {
+  //     consonantsCounter++;
+  //   }
+  //}
+  stringToCountVowels.innerText = `Vowels Total: ${vowelCounter}`;
+
+  stringToCountConsts.innerText = `Consonants Total: ${consonantsCounter}`;
+};
+
+const nameChecker = (name) => {
+  if (!name) return "Did no enter a name";
+  if (typeof name !== "string") return "Its not a valid string";
+
+  let regExp = /^[A-Za-zÑñ\s]+$/g.test(name);
+
+  return regExp
+    ? `The name: ${name} is a valid name`
+    : `the ${name} its not a valid name`;
+};
+
+const stringNameEmailChecker = (string = "", pattern = "") => {
+  // if (!string) return "Did no enter a name";
+  // if (typeof string !== "string") return "Its not a valid string";
+
+  let regExp = pattern.test(string);
+
+  return regExp
+    ? `The string: ${string} is a valid`
+    : `the string: ${string} its not a valid string`;
 };
 
 // events
 
 stringInput.addEventListener("keyup", () => {
-  stringResult.innerHTML = `Characters:  ${countCharacters(stringInput.value)}`;
+  stringResult.innerHTML = `Length:  ${countCharacters(stringInput.value)}`;
 });
 
 wordToCutBtn.addEventListener("click", (e) => {
@@ -392,8 +528,48 @@ evenNumberBtn.addEventListener("click", () => {
 
 gradesNumberBtn.addEventListener("click", () => {
   const grade = Number(document.querySelector(".grade").value);
-  console.log(grade)
+  console.log(grade);
   const unity = document.getElementById("unity").value;
-  console.log(unity)
+  console.log(unity);
   gradesNumberResult.innerText = convertTemperature(grade, unity);
+});
+
+numberToConvertBtn.addEventListener("click", () => {
+  const number = Number(document.querySelector(".numberToConvert").value);
+  const baseType = Number(document.getElementById("baseType").value);
+  console.log(number, baseType);
+
+  numberToConvertResult.innerText = binaryToDecimal(number, baseType);
+});
+
+tipBtn.addEventListener("click", () => {
+  const amount = Number(document.querySelector(".Amount").value);
+  const tip = Number(document.getElementById("tip").value);
+
+  tipResult.innerText = tipCalculator(amount, tip);
+});
+
+dateBtn.addEventListener("click", () => {
+  let date = document.querySelector(".date").value;
+  date = new Date(date);
+
+  dateResult.innerText = dateCalculator(date);
+});
+
+stringToCountBtn.addEventListener("click", () => {
+  const string = document.querySelector(".stringToCount").value;
+
+  vowelConsonantsCounter(string);
+});
+
+stringToCheckBtn.addEventListener("click", () => {
+  const name = document.querySelector(".stringToCheck").value;
+  stringToCheckResult.innerText = nameChecker(name);
+});
+
+stringRegToCheckBtn.addEventListener("click", () => {
+  const string = document.querySelector(".emailToCheck").value;
+  const pattern = document.getElementById('regExpPattern').value
+
+  stringRegToCheckResult.innerText = stringNameEmailChecker(string, pattern);
 });

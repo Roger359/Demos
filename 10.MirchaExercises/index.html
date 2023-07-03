@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>JonMircha Exercises</title>
+    <title>JavaScript Exercises</title>
   </head>
   <body>
     <header>
-      <h1>JonMircha Exercises</h1>
+      <h1>JavaScript Exercises</h1>
     </header>
     <main>
       <!-- String counter-->
       <section>
         <div class="container">
           <h2 class="heading">1. String counter</h2>
+          <p>string.length</p>
           <input
             type=""
             class="stringInput"
@@ -29,6 +30,7 @@
         <div class="container">
           <div class="internal-header">
             <h2 class="heading">2. Cut Words</h2>
+            <p>text.slice(0, Length)</p>
           </div>
 
           <input
@@ -51,6 +53,7 @@
       <section>
         <div class="container">
           <h2 class="heading">3. Split Strings</h2>
+          <p>text.split(" ")</p>
           <input
             type="text"
             class="splitString"
@@ -68,6 +71,7 @@
         <div class="container">
           <div class="internal-header">
             <h2 class="heading">4. Repeat String</h2>
+            <p>text.repeat(times)</p>
           </div>
           <input
             type="text"
@@ -89,6 +93,7 @@
       <section>
         <div class="container">
           <h2 class="heading">5. Reverse String</h2>
+          <p>text.split("").reverse().join("")</p>
           <input
             type="text"
             class="reverseString"
@@ -105,6 +110,24 @@
       <section>
         <div class="container">
           <h2 class="heading">6. Counting words</h2>
+
+          <code style="text-align: left">
+            let i = 0,
+            <br />
+            counter = 0;
+            <br />
+            while (i !== -1) {
+            <br />
+            i = str.indexOf(word, i);
+            <br />
+            if (i !== -1) {
+            <br />
+            i++;
+            <br />
+            counter++; }
+            <br />
+            }
+          </code>
           <input
             type="text"
             class="numbersOfWords"
@@ -127,6 +150,8 @@
       <section>
         <div class="container">
           <h2 class="heading">7. Palindrome Checker</h2>
+          <p>Method 1:endWord.split('').reverse().join('')</p>
+          <p>Method 2:[...endWord].reverse().join("")</p>
           <input
             type="text"
             class="palString"
@@ -142,6 +167,7 @@
       <section>
         <div class="container">
           <h2 class="heading">8. Delete Specific Words</h2>
+          <p>str.replace( new RegExp(pattern, "ig"), "" )</p>
           <input
             type="text"
             class="deleteOfWords"
@@ -162,7 +188,8 @@
       <!-- Random number by ranges -->
       <section>
         <div class="container">
-          <h2 class="heading">9. Random Number</h2>
+          <h2 class="heading">9. Random Number with Ranges</h2>
+          <p>min + Math.floor(Math.random() * (max - min + 1))</p>
           <input
             type="number"
             class="minValue"
@@ -182,6 +209,11 @@
       <section>
         <div class="container">
           <h2 class="heading">10. Capicua Checker</h2>
+          <p style="text-align: left">
+            let convertNumToString = num.toString();
+            <br />
+            let reversedNumber = convertNumToString.split("").reverse().join("")
+          </p>
           <input
             type="number"
             class="capicuaNumber"
@@ -196,6 +228,13 @@
       <section>
         <div class="container">
           <h2 class="heading">11. Calculate Factorial number</h2>
+          <p>
+            if (num === 0 || num === 1) return 1;
+            <br />
+            for (var i = num - 1; i >= 1; i--) {
+            <br />
+            num *= i; }
+          </p>
           <p>6! : 1 x 2 x 3 x 4 x 5 x 6 = 720</p>
           <input
             type="number"
@@ -211,6 +250,14 @@
       <section>
         <div class="container">
           <h2 class="heading">12. Odd Number Checker</h2>
+          <p style="text-align: left">
+            let divisible = false;<br />
+
+            for (let i = 2; i < num; i++) {<br />
+            if (Number(num) % i === 0) { <br />
+            divisible = true;<br />
+            break; }
+          </p>
           <input
             type="number"
             class="oddNumber"
@@ -225,6 +272,14 @@
       <section>
         <div class="container">
           <h2 class="heading">13. Even Number Checker</h2>
+          <p style="text-align: left">
+            let divisible = false;<br />
+
+            for (let i = 2; i < num; i++) {<br />
+            if (Number(num) % 2 === 0) {<br />
+            divisible = true;<br />
+            break; } }
+          </p>
           <input
             type="number"
             class="evenNumber"
@@ -254,6 +309,145 @@
 
           <button class="gradesNumber-btn btn">Check</button>
           <p class="gradesNumberResult">0</p>
+        </div>
+      </section>
+      <!-- Base binaria a base 10 (decimal) -->
+      <section>
+        <div class="container">
+          <h2 class="heading">15. Binary to Decimal</h2>
+          <p>Binary(2) To decimal: parseInt(number,baseType)</p>
+          <p>Decimal(10) to Binary: number.toString(2)</p>
+          <input
+            type="number"
+            class="numberToConvert"
+            name="numberToConvert"
+            placeholder="Enter the number"
+          />
+
+          <select name="baseType" id="baseType">
+            <option class="unity">Select...</option>
+            <option value="2" class="unity">Binary(2)</option>
+            <option value="10" class="unity">Decimal(10)</option>
+          </select>
+
+          <button class="numberToConvert-btn btn">Check</button>
+          <p class="numberToConvertResult">0</p>
+        </div>
+      </section>
+      <!-- Tip calculator -->
+      <section>
+        <div class="container">
+          <h2 class="heading">16. Tip Calculator</h2>
+          <p>
+            The tip is: ${(amount)} - ${tip}% = ${amount - ((amount*tip)/100)}`
+          </p>
+          <input
+            type="number"
+            class="Amount"
+            name="Amount"
+            placeholder="Enter the number"
+          />
+
+          <select name="tip" id="tip">
+            <option class="unity">Select...</option>
+            <option value="0" class="unity">0%</option>
+            <option value="5" class="unity">5%</option>
+            <option value="10" class="unity">10%</option>
+          </select>
+
+          <button class="tip-btn btn">Check</button>
+          <p class="tipResult">0</p>
+        </div>
+      </section>
+      <!-- Date Function -->
+      <section>
+        <div class="container">
+          <h2 class="heading">17. Date Function</h2>
+
+          <input
+            type="date"
+            class="date"
+            name="date"
+            placeholder="Enter a Date"
+          />
+
+          <button class="date-btn btn">Check</button>
+          <p class="dateResult">0</p>
+        </div>
+      </section>
+
+      <!-- Vowel and Consonants counter  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">18. Vowel&Consonants Counter</h2>
+          
+          <input
+            type="text"
+            class="stringToCount"
+            id="stringToCount"
+            placeholder="Enter the string"
+          />
+         
+          <button class="stringToCount-btn btn">Count</button>
+          <p class="stringToCountVowels">0</p>
+          <p class="stringToCountConsts">0</p>
+        </div>
+      </section>
+
+      <!-- Name checkers  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">19. Name checkers</h2>
+          
+          <input
+            type="text"
+            class="stringToCheck"
+            id="stringToCheck"
+            placeholder="Enter the string"
+          />
+         
+          <button class="stringToCheck-btn btn">Check</button>
+          <p class="stringToCheckResult">...</p>
+        </div>
+      </section>
+
+      <!-- Email checker  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">20. Email Checker</h2>
+          
+          <input
+            type="text"
+            class="emailToCheck"
+            id="emailToCheck"
+            placeholder="Enter the string"
+          />
+         
+          <button class="emailToCheck-btn btn">Check</button>
+          <p class="emailToCheckResult">...</p>
+        </div>
+      </section>
+
+      <!-- Email checker  -->
+      <section>
+        <div class="container">
+          <h2 class="heading">20. Email Checker and Name checker</h2>
+          
+          <input
+            type="text"
+            class="stringRegToCheck"
+            id="stringRegToCheck"
+            placeholder="Enter the string"
+          />
+
+          <select name="regExpPattern" id="regExpPattern">
+            <option class="unity">Select...</option>
+            <option value="/^[A-Za-zÑñ\s]+$/g" class="unity">Name Checker</option>
+            <option value="/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i" class="unity">Email Checker</option>
+          </select>
+         
+          <button class="stringRegToCheck-btn btn">Check</button>
+          <p class="stringRegToCheckResult">...</p>
         </div>
       </section>
     </main>

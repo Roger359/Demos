@@ -30,15 +30,14 @@ body {
 }
 
 main {
-  /* border: 2px solid red; */
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
   margin: 0 auto;
   padding: 2rem;
+  max-width: 100%;
 }
 
 header {
@@ -47,19 +46,18 @@ header {
   text-align: center;
   margin: 0;
   padding: 2rem;
-  /* border: 2px solid red; */
 }
 
 section {
   padding: 1rem;
-  /* border: 2px solid red; */
   min-height: 60vh;
 }
 
-p {
+p,
+code {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 800;
   color: darkcyan;
   padding: 2rem;
@@ -79,7 +77,6 @@ select {
   font-size: 2rem;
   text-align: center;
 }
-
 
 .heading {
   font-size: 2.5rem;
@@ -107,8 +104,6 @@ select {
   border: 2px solid red;
 }
 
-
-
 .btn {
   margin: 1rem;
   padding: 1rem;
@@ -130,11 +125,12 @@ select {
   transition: all 400ms ease;
   border: var(--color-primary);
 }
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 667px) {
   .container {
     width: 100%;
     min-width: 0;
-    padding: 0 4rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
   }
 
   h1 {
@@ -144,13 +140,34 @@ select {
     font-size: 2rem;
   }
 
-  p {
-    font-size: 1.5rem;
-  }
   input {
     font-size: 1.5rem;
   }
   section {
     padding: 0.1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 50%;
+    min-width: 0;
+    padding: 0 4rem;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p{
+    font-size: 1.7rem;
   }
 }
