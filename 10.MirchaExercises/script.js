@@ -570,17 +570,17 @@ const sortingArrays = (array = undefined) => {
   return `Convert the array = ${array} into a Ascendent Array = ${objectsOfArrays.ascendent} and Descendent Array is = ${objectsOfArrays.descendent}`;
 };
 
-const removeDuplicateValuesInArray = (array) => {
+const removeDuplicateValuesInArray = (array = undefined) => {
   if (!(array instanceof Array)) return "The value is not a Array";
 
-  for (let num of array) {
-    if (isNaN(num)) return "Its not a valid numbers array";
-  }
+  // let newArray = array.filter((item, index, self) => self.indexOf(item) === index);
+  // let newArray = array.filter((item, index) => array.indexOf(item) === index);
 
-  let newArray =  array.filter((item, index) => array.indexOf(item) === index)
-  console.log(newArray)
-  return `Remove duplicate values from = ${array}, new array without duplicate values = ${newArray}`
-}
+  let newArray = [...new Set(array)];
+
+  console.log(newArray);
+  return `Remove duplicate values from = ${array}, new array without duplicate values = ${newArray}`;
+};
 
 const getArrayAverage = (array = undefined) => {
   if (!(array instanceof Array)) return "The value is not a Array";
@@ -591,7 +591,17 @@ const getArrayAverage = (array = undefined) => {
     if (isNaN(num)) return "Its not a valid numbers array";
   }
 
-  return `The Average value is = `;
+ return array.reduce((total, value, index, array) => {
+    total += value;
+    if(index === array.length - 1){
+      return   `The Average value is = ${array.join('+')} es ${total/array.length}`
+
+    }else{
+      return total;
+    }
+  });
+
+  
 };
 // events
 
@@ -811,27 +821,32 @@ deleteArrayValuesBtn.addEventListener("click", () => {
   if (array.length === 0)
     return (deleteArrayValuesResult.innerText = "The array is empty");
 
-  let newArray = [];
+  if (array.length === 1)
+    return (deleteArrayValuesResult.innerText =
+      "At least 2 values are required");
+  // let newArray = [];
   array = array.split(",");
   console.log(array);
 
   // converting to  numbers
-  for (let i = 0; i < array.length; i++) {
-    newArray.push(parseInt(array[i]));
-  }
-  console.log("converted string to array", newArray);
-  deleteArrayValuesResult.innerText = removeDuplicateValuesInArray(newArray);
+  // for (let i = 0; i < array.length; i++) {
+  //   newArray.push(parseInt(array[i]));
+  // }
+  console.log("converted string to array", array);
+  deleteArrayValuesResult.innerText = removeDuplicateValuesInArray(array);
 });
 
 arrayAverageBtn.addEventListener("click", () => {
   let array = document.querySelector(".arrayAverage").value;
-  let sqr = [];
+  if (array.length === 0)
+    return (deleteArrayValuesResult.innerText = "The array is empty");
+  let newArray = [];
   array = array.split(",");
 
   for (let i = 0; i < array.length; i++) {
-    sqr.push(parseInt(array[i]));
+    newArray.push(parseInt(array[i]));
   }
-  console.log("converted string to array", sqr);
+  console.log("converted string to array", newArray);
 
-  arrayAverageResult.innerText = getArrayAverage(array);
+  arrayAverageResult.innerText = getArrayAverage(newArray);
 });
