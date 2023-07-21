@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #97feed;
+  --light-blue: #35a29f;
+  --color-primary: #0b666a;
+  --color-sec: #071952;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to left, var(--color-sec), var(--light-blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  padding: 1rem;
+  margin: 1rem;
+  /* border: 2px solid red */
+  font-size: 2.5rem;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+form input[type="text"] {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+form input[type="submit"] {
+  padding: 0.5rem;
+  background-color: var(--light-blue);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--color-sec);
+}
+
+.container {
+  background-color: var(--white);
+  margin: 3rem;
+  padding: 2rem;
+  border: 2px solid var(--dark-grey);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.description {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.details div {
+  padding: 2rem;
+  margin: 0.5rem;
+  background-color: #f1f1f1;
+  flex: 1;
+  border-radius: 5px;
+  text-align: center;
+  min-height: 45px;
+  
+}
+
+@media (max-width: 768px) {
+  form{
+    flex-direction: column;
+  }
+
+  form input[type='text']{
+    width: 100%;
+    margin-bottom: 1rem;
+    
+  }
+  
+}
