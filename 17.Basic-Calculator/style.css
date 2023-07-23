@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --yellow: #f2be22;
+  --green: #22a699;
+  --color-primary: #f24c3d;
+  --color-sec: #f29727;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background: linear-gradient(to right, var(--green), var(--color-sec));
+}
+
+.calculator {
+  border: 2px solid red;
+  background-color: var(--grey);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  border: solid 1px #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 5px;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 2rem;
+
+}
+
+button {
+  padding: 1rem;
+  font-size: 2rem;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover{
+  background-color: #ddd;
+}
+
+.clear{
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.number, .decimal{
+  background-color: var(--white);
+  color: var(--dark-grey);
+
+}
+
+.operator{
+  background-color: var(--color-sec);
+  color: var(--white);
+
+}
+
+.equals{
+  background-color: var(--green);
+  color: #fff;
+  grid-row: span 3;
+}
