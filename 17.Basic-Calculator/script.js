@@ -1,38 +1,28 @@
 const input = document.getElementById("result");
 const buttons = document.querySelectorAll("button");
 
-
 const clearResult = () => {
-  input.value = ''
-}
+  input.value = "";
+};
 
 const calculateResult = () => {
-
-  input.value = eval(input.value)
-
-}
+  input.value = eval(input.value);
+};
 
 const appendValue = (value) => {
-
-  input.value += value
-
-}
-
-
+  input.value += value;
+};
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
-    const buttonValue = buttons[i].textContent
+    const buttonValue = buttons[i].textContent;
 
-
-    if(buttonValue === 'C'){
-      clearResult()
-
-    }else if(buttonValue === '='){
-      calculateResult()
-
-    }else{
-      appendValue(buttonValue)
+    if (buttonValue === "C") {
+      clearResult();
+    } else if (buttonValue === "=") {
+      calculateResult();
+    } else {
+      appendValue(buttonValue);
     }
   });
 }
