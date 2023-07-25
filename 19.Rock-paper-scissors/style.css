@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --yellow: #f2be22;
+
+  --green: #22a699;
+  --color-primary: #f24c3d;
+  --color-sec: #f29727;
+  --color-pink: #f92672;
+  --color-text-shadow-pink: #f8a5c2;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--grey);
+  color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+}
+
+button {
+  border: none;
+  font-size: 3rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: blueviolet;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#rock {
+  background-color: var(--color-primary);
+}
+#paper {
+  background-color: var(--dark-grey);
+}
+#scissors {
+  background-color: darkcyan;
+}
+
+p > #user-score {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+p > #computer-score {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+  }
+}
