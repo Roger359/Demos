@@ -127,4 +127,28 @@ export const projects = [
     img: "/images/22.png",
     src: "/22.Recipe-Book-App",
   },
+  {
+    title: "Animated login UI",
+    description: "All kind of generators functions",
+    img: "/images/23.png",
+    src: "/23.Animated_Login_UI",
+  },
+  {
+    title: "DarkMode Toggle",
+    description: "All kind of generators functions",
+    img: "/images/24.png",
+    src: "/24.DarkModeToggle",
+  },
+  {
+    title: "Dictonary",
+    description: "Dictonary using https://dictionaryapi.dev/",
+    img: "/images/25.png",
+    src: "/25.Dictionary",
+  },
+  {
+    title: "Survey Form",
+    description: "freeCodeCamp survey form exercise",
+    img: "/images/26.png",
+    src: "/26.Survey_form",
+  },
 ];
