@@ -1,9 +1,111 @@
-export const projects = [{
-  title: 'Random Generators',
-  description: 'All kind of generators functions',
-  img: '/images/1.png',
-  src: '/2.Random_Generators/index.html',
-
-
-}]
-
+export const projects = [
+  {
+    title: "Functions App",
+    description: "All kind of Beginner functions, working with text and inputs",
+    img: "/images/1.png",
+    src: "/1.Functions_App/index.html",
+  },
+  {
+    title: "Random Generators",
+    description: "All kind of Random generators functions",
+    img: "/images/2.png",
+    src: "/2.Random_Generators/index.html",
+  },
+  {
+    title: "Modal Popup",
+    description: "Modal popup with exit button ",
+    img: "/images/3.png",
+    src: "/3.Modal_Popup/index.html",
+  },
+  {
+    title: "Converter App",
+    description: "Currency converter, weight converter and Temperature converter apps",
+    img: "/images/4.png",
+    src: "/4.ConverterApp/index.html",
+  },
+  {
+    title: "Password Toggle",
+    description: "Hidden password",
+    img: "/images/5.png",
+    src: "/5.PasswordToggle/index.html",
+  },
+  {
+    title: "Vertical Tabs",
+    description: "All kind of generators functions",
+    img: "/images/6.png",
+    src: "/6.Vertical_Tabs/index.html",
+  },
+  {
+    title: "Tip Calculator",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/7.Tip_Calculator/index.html",
+  },
+  {
+    title: "Feedback UI",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/8.FeedbackUI/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "Mircha Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/10.MirchaExercises/index.html",
+  },
+  {
+    title: "Body Mass Index Calculator",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/12.BodyMassIndexCalculator/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  {
+    title: "freeCodeCamp Exercises",
+    description: "All kind of generators functions",
+    img: "/images/2.png",
+    src: "/9.freeCodeCamp_Exercises/index.html",
+  },
+  
+];
