@@ -151,4 +151,10 @@ export const projects = [
     img: "/images/26.png",
     src: "/26.Survey_form",
   },
+  {
+    title: "Age calculator",
+    description: "Age Calculator",
+    img: "/images/27.png",
+    src: "/27.Age-Calculator",
+  },
 ];
