@@ -157,4 +157,10 @@ export const projects = [
     img: "/images/27.png",
     src: "/27.Age-Calculator",
   },
+  {
+    title: "Sticky Navbar",
+    description: "Sticky navbar",
+    img: "/images/28.png",
+    src: "/28.Sticky-navbar",
+  },
 ];
