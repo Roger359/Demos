@@ -103,10 +103,6 @@ a:hover {
 .anchor-title {
   color: var(--dark-grey);
   font-weight: 900;
-  
-}
-.anchor-title:hover {
-  
 }
 
 /* text-gray-900 font-bold text-xl mb-2 line-clamp-1 */
@@ -135,11 +131,16 @@ a:hover {
 }
 
 .demo {
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   font-weight: 800;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+.fa-github{
+  font-size: 2rem !important;
+  padding: 1rem 1rem ;
 }

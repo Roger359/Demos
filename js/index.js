@@ -41,11 +41,22 @@ for (let i = 0; i < projects.length; i++) {
   const demoDiv = document.createElement("div");
   demoDiv.classList.add("demo");
   const demoAnchor = document.createElement("a");
+
   demoAnchor.textContent = "DEMO";
   demoAnchor.target = "_blank";
   demoAnchor.href = projects[i].src;
+  
+  const demoRepo = document.createElement("a");
+  demoRepo.target = '_blank'
+  demoRepo.href = projects[i].repohref;
+  const iconRepo = document.createElement("i");
+  iconRepo.classList.add("fa");
+  iconRepo.classList.add("fa-github");
 
+
+  demoRepo.appendChild(iconRepo);
   demoDiv.appendChild(demoAnchor);
+  demoDiv.appendChild(demoRepo);
 
   divContainer.appendChild(anchorContainer);
   divContainer.appendChild(divTexts);
