@@ -215,4 +215,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/28.Sticky-navbar/script.js'
 
   },
+  {
+    title: "Image Slider",
+    description: "Image Slider using Font Awesome and Lorem Picsum tools",
+    img: "/images/29.png",
+    src: "/29.Image-Slider",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/29.Image-Slider/script.js'
+
+  },
 ];

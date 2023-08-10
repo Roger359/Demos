@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --yellow: #f2be22;
+  --green: #22a699;
+  --color-primary: #f24c3d;
+  --color-sec: #f29727;
+  --color-pink: #f92672;
+  --color-text-shadow-pink: #f8a5c2;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--yellow);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slider-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn.fa-angles-right {
+  right: 10px;
+}
+.btn.fa-angles-left {
+  left: 10px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
