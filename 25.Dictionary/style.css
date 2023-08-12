@@ -21,35 +21,36 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--dark-grey);
+  /* background-color: var(--dark-grey); */
+  background: url(IMG_20230624_110348.jpg) no-repeat center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  /* border: 3px solid red; */
+  min-height: 30vh;
+  /* border: 2px solid red; */
 }
 
-.container{
-  background-color: var(--light-blue);
+.container {
+  background-color: var(--dark-grey);
   padding: 2rem;
   border-radius: 7px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   width: 90%;
   margin: 1rem;
   text-align: center;
   max-width: 500px;
   font-size: 1.2rem;
   font-weight: 500;
-
 }
 
-.heading{
+.heading {
   font-size: 2.5rem;
   margin: 1rem;
   color: var(--white);
 }
 
-.input{
+.input {
   background-color: var(--white);
   height: 3rem;
   color: var(--black);
@@ -57,18 +58,14 @@ body {
   width: 80%;
   border-color: var(--black);
   font-size: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 5px;
-
 }
-p{
-  padding: .5rem;
+p {
+  padding: 0.5rem;
   color: var(--grey);
 }
 
-.meaning-container{
+.meaning-container {
   display: none;
 }
-
-
-
