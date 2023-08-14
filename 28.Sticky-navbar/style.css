@@ -3,15 +3,14 @@
 :root {
   --white: #fff;
   --black: #1c2b2d;
-  --yellow: #f2be22;
-
+  --grey: #eee;
+  --dark-grey: #222831;
   --green: #22a699;
+  --yellow: #f2be22;
   --color-primary: #f24c3d;
   --color-sec: #f29727;
   --color-pink: #f92672;
   --color-text-shadow-pink: #f8a5c2;
-  --grey: #eee;
-  --dark-grey: #222831;
 }
 
 * {

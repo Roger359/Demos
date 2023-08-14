@@ -223,4 +223,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/29.Image-Slider/script.js'
 
   },
+  {
+    title: "Chatbot using Open AI API",
+    description: "Chatbot using Open AI API",
+    img: "/images/30.png",
+    src: "/30.Chatbot",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/30.Chatbot/script.js'
+
+  },
 ];
