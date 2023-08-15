@@ -4,7 +4,7 @@ const searchResults = document.querySelector(".search-results");
 const showMoreBtn = document.getElementById("show-more-btn");
 
 /* unsplash access key */
-const accessKey = "uVHBxNuySHs08_W4tAnIw5n3ab7B--yn-ARV6i9gxBE";
+const UNSPLASH_KEY = config.UNSPLASH_KEY;
 
 let inputData = "";
 let page = 1;

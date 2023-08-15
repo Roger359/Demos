@@ -224,7 +224,7 @@ export const projects = [
 
   },
   {
-    title: "Chatbot using Open AI API",
+    title: "Chatbot with AI",
     description: "Chatbot using Open AI API",
     img: "/images/30.png",
     src: "/30.Chatbot",

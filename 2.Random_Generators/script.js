@@ -32,7 +32,7 @@ const apiJokesUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1";
 const options = {
   method: "GET",
   headers: {
-    "X-Api-Key": config.MY_KEY,
+    "X-Api-Key": config.JOKES_KEY,
   },
 };
 
@@ -40,7 +40,7 @@ const options = {
 const emojiBtn = document.getElementById("emoji-btn"),
   emoji_Name = document.getElementById("emoji-name");
 const emoji = [];
-const emojiUrl = `https://emoji-api.com/emojis?access_key=${config.Key2}`;
+const emojiUrl = `https://emoji-api.com/emojis?access_key=${config.EMOJI_KEY}`;
 
 // FUNCTIONS
 

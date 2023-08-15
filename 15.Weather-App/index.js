@@ -1,4 +1,4 @@
-const apiKey = "76f6708ff0a54b9d01b96f288241f7f8";
+const WEATHER_KEY = config.WEATHER_KEY;
 
 const weatherData = document.getElementById("weather-data");
 const cityInput = document.getElementById("city-input");
