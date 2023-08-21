@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --yellow: #f2be22;
+  --green: #22a699;
+  --color-primary: #f24c3d;
+  --color-sec: #f29727;
+  --color-pink: #f92672;
+  --color-text-shadow-pink: #f8a5c2;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--yellow);
+  color: var(--black);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.container h1 {
+  margin-bottom: 1rem;
+}
+.input-container {
+  width: 100%;
+  border: solid 2px var(--black);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.input::placeholder{
+  letter-spacing: 0px;
+
+}
+
+.fa-copy{
+  cursor: pointer;
+  opacity: .3;
+
+}
+
+.fa-copy:hover{
+  opacity: .7;
+}
+
+.btn{
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-size:  1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: var(--color-sec);
+}
+
+.btn:active{
+  transform: scale(0.95);
+}
+
+.alert-container{
+  position: fixed;
+  width: 300px;
+  height: 50px;
+  background-color: var(--green);
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: .4s;
+}
+
+.active.alert-container{
+  right: -300px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
