@@ -231,4 +231,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/30.Chatbot/script.js'
 
   },
+  {
+    title: "Random Password Generator",
+    description: "Random Password using a local char string",
+    img: "/images/31.png",
+    src: "/31.Random-Password-Generator",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/31.Random-Password-Generator/script.js'
+
+  },
 ];
