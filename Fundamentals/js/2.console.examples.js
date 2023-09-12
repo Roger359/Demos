@@ -1,3 +1,9 @@
+console.info('-------------Console Examples---------------')
+console.warn('Warning example')
+console.error('Error example')
+
+
+console.log('-------Using console.time -----------')
 console.time('how long does my code take to execute');
 
 const array = Array(1000000)
@@ -12,3 +18,5 @@ y = 2,
 testXY = "Waiting X variable always be minus than Y variable"
 
 console.assert(x<y,{x,y},testXY)
+
+console.info('-------------Console Examples END---------------')

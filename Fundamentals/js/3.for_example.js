@@ -1,3 +1,7 @@
+
+
+console.warn('---------FOR EXAMPLE---------------')
+
 function countSelected(selectObject) {
   let numberSelected = 0;
   for (let i = 0; i < selectObject.options.length; i++) {
@@ -12,5 +16,8 @@ const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
   const musicTypes = document.selectForm.musicTypes;
+  
   console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
+
+console.warn('---------FOR EXAMPLE END---------------')

@@ -1,3 +1,8 @@
+
+console.warn('----Conditional Examples----')
+
+console.info('--------Result using if-else------')
+
 let hour = 19;
 
 /* Let me sleep */
@@ -17,6 +22,7 @@ console.log('Good Afternoon')
 console.log('Good Evening')
 }
 
+console.info('--------Result using switch------')
 let day = 5;
 
 switch(day){
@@ -46,3 +52,5 @@ default:
 console.log('The day does not exist')
 break;
 }
+
+console.warn('----Conditional Examples END----')
