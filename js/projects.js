@@ -239,4 +239,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/31.Random-Password-Generator/script.js'
 
   },
+  {
+    title: "Random Meal Generator",
+    description: "Random meal using https://www.themealdb.com API",
+    img: "/images/32.png",
+    src: "/32.Random-meal-generator",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/32.Random-meal-generator/script.js'
+
+  },
 ];
