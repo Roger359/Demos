@@ -24,8 +24,8 @@
   <!-- Menu -->
   <div class="container" id="menu">
     <ul>
-      <li><a href="#oneLinearString">1. One Linear String Methods</a></li>
-      <li><a href="#oneLinearArrays">2. One linear Array Methods</a></li>
+      <li><a href="#oneLinearString">1. One Line String Methods</a></li>
+      <li><a href="#oneLinearArrays">2. One line Array Methods</a></li>
       <li>
         <a href="#conditionals">3. Conditionals</a>
       </li>
@@ -33,9 +33,23 @@
       <li>
         <a href="#forin">4.1. Loops: FOR IN</a>
       </li>
-      <li><a href="#console">2. Console Object</a></li>
-      <li><a href="#apply">7. Appy() Method</a></li>
+      <li><a href="#trycatch">5. Exception: try...catch</a></li>
+      <li><a href="#rest">6. Rest Parameters</a></li>
+      <li><a href="#class">7. Class and Inheritance</a></li>
+      <li><a href="#console">8. Console Object</a></li>
+      <li><a href="#setTimeout">9. setTimeout</a></li>
+      <li><a href="#setInterval">10. setInterval</a></li>
+      <li><a href="#codeAsyncNoBlock">11. Codigo Async no-bloqueante</a></li>
+      <li><a href="#codeSyncBlock">12. Codigo Sync bloqueante</a></li>
+      <li><a href="#callbacks">13. Callbacks</a></li>
+      <li><a href="#promises">14. Promises</a></li>
+      <li><a href="#async-await">15. Async - Await</a></li>
+      <li><a href="#datatypeMap">16. Data type: Map</a></li>
+      <li><a href="#weaksMap-Sets">17. WeakSets - WeakMaps</a></li>
+      <li><a href="#iterator-iterable">18. Iterable - Iterator</a></li>
+      <li><a href="#generators">19. Generators</a></li>
       <li><a href="#bind">8. Bind() Method</a></li>
+      <li><a href="#apply">7. Appy() Method</a></li>
 
 
 
@@ -246,72 +260,7 @@
 
   </div>
 
-  <!-- Console section -->
-  <div class="section-container" id="console">
-    <h2>Console Object Examples</h2>
-    <pre><code class="language-javascript">
-    
-      console.info('-------------Console Examples---------------')
-      console.warn('Warning example')
-      console.error('Error example')
-
-      console.log('-------Using console.time -----------')
-      console.time('how long does my code take to execute');
-
-      const array = Array(1000000)
-      for(let i = 0; i < array.length; i++){
-      array[i] = i 
-      }
-      console.timeEnd('how long does my code take to execute')
-
-      // console.assert() unit test
-      let x = 3,
-      y = 2,
-      testXY = "Waiting X variable always be minus than Y variable"
-
-      console.assert(x "less than" y,{x,y},testXY)
-
-      console.info('-------------Console Examples END---------------');
-
-
-    </code></pre>
-
-
-  </div>
-
-  <!-- For in examples -->
-  <div class="section-container" id="forin">
-    <h2> Loops: <span>FOR IN Example</span></h2>
-    <pre><code class="language-javascript">
-
-      const myCar = {
-        make: "Ford",
-        model: "Mustang",
-        year: 1969,
-      };
-      
-      function dumpProps(objName) {
-        let result = "";
-      
-        for (const i in objName) {
-          // console.log(`Key: ${i}, Value: ${objName[i]} `)
-          result += `${objName}.${i} = ${objName[i]}<br>`;
-        }
-        result += "<hr>";
-        return result;
-      }
-      
-      console.log(dumpProps(myCar));
-
-    </code></pre>
-    <h3>Console output</h3>
-    <pre><code class="language-javascript">
-      '[object Object].make = Ford<br>[object Object].model = Mustang<br>[object Object].year = 1969<br>'
-    </code></pre>
-
-  </div>
-
-  <!-- For Example -->
+  <!-- 4. For Example -->
   <div class="section-container" id="for">
     <h2> Loops: <span>FOR </span></h2>
     <pre><code class="language-javascript">
@@ -357,8 +306,271 @@
 
   </div>
 
+  <!-- 4.1. For in examples -->
+  <div class="section-container" id="forin">
+    <h2> Loops: <span>FOR IN Example</span></h2>
+    <pre><code class="language-javascript">
+
+      const myCar = {
+        make: "Ford",
+        model: "Mustang",
+        year: 1969,
+      };
+      
+      function dumpProps(objName) {
+        let result = "";
+      
+        for (const i in objName) {
+          // console.log(`Key: ${i}, Value: ${objName[i]} `)
+          result += `${objName}.${i} = ${objName[i]}<br>`;
+        }
+        result += "<hr>";
+        return result;
+      }
+      
+      console.log(dumpProps(myCar));
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      '[object Object].make = Ford<br>[object Object].model = Mustang<br>[object Object].year = 1969<br>'
+    </code></pre>
+
+  </div>
+
+  <!-- 5. try...catch -->
+  <div class="section-container" id="forin">
+    <h2> Exception: try...catch</h2>
+    <pre><code class="language-javascript">
+
+     
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+    </code></pre>
+
+  </div>
+
+  <!-- 6. Rest Parameter -->
+  <div class="section-container" id="rest">
+    <h2> Rest Parameter</h2>
+    <pre><code class="language-javascript">
+  
+      function sum(a, b, ...c) {
+        let result = a + b;
+        c.forEach(function (n) {
+          result += n;
+        });
+      
+        return result
+      }
+      
+      let newResult = sum(2,3)
+      let newResultWithSpread = sum(3,5,7)
+      console.log(newResult)
+      console.log(newResultWithSpread)
+  
+      </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      5
+      15
+    </code></pre>
+
+  </div>
+
+  <!-- 7. Class and Inheritance -->
+  <div class="section-container" id="class">
+    <h2> Rest Parameter</h2>
+    <pre><code class="language-javascript">
+  
+      class Animal {
+        constructor(name, genre) {
+          this.name = name;
+          this.genre = genre;
+        }
+      
+        /* Methods */
+        sound() {
+          console.log("I make sounds becasuse I am alive");
+        }
+        greet() {
+          console.log(`my name is ${this.name}`);
+        }
+      }
+      
+      /* inheritance in classes*/
+      class Dog extends Animal {
+        constructor(name, genre, size) {
+          /* call the constructuor of the father class*/
+          super(name, genre);
+          this.size = size;
+          this.breed = null;
+        }
+      
+        sound() {
+          console.log("Guauuu Guauuu!!");
+        }
+      
+        // a static methods can be executed whitout the need for an instance of the class
+        static whatYouAre() {
+          console.log("I am a dog, the best friend of the human be");
+        }
+      
+        /* the setters and getters are specials methods that allow us set and 
+        get the attribiutes values of our class*/
+      
+        get getBreed() {
+          return this.breed;
+        }
+      
+        set setBreed(breed) {
+          this.breed = breed;
+        }
+      }
+      
+      
+      Dog.whatYouAre(); // output: 'I am a dog, the best friend of the human be'
+      
+      //Instances of the class
+      
+      const mimi = new Animal("mimi", "female"),
+        scooby = new Dog("scooby", "male", "gigant");
+      
+      mimi.greet(); // --> output: 'My name is mimi'
+      scooby.sound(); // --> output: "Guauuu Guauuu!!"
+      scooby.setBreed = 'Chihuahua'
+      console.log(scooby.getBreed)
+      
+  
+      </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      I am a dog, the best friend of the human be
+      my name is mimi
+      Guauuu Guauuu!!
+      Chihuahua
+    </code></pre>
+
+  </div>
 
 
+  <!-- 8. Console section -->
+  <div class="section-container" id="console">
+    <h2>Console Object Examples</h2>
+    <pre><code class="language-javascript">
+  
+    console.info('-------------Console Examples---------------')
+    console.warn('Warning example')
+    console.error('Error example')
+
+    console.log('-------Using console.time -----------')
+    console.time('how long does my code take to execute');
+
+    const array = Array(1000000)
+    for(let i = 0; i < array.length; i++){
+    array[i] = i 
+    }
+    console.timeEnd('how long does my code take to execute')
+
+    // console.assert() unit test
+    let x = 3,
+    y = 2,
+    testXY = "Waiting X variable always be minus than Y variable"
+
+    console.assert(x "less than" y,{x,y},testXY)
+
+    console.info('-------------Console Examples END---------------');
+
+
+  </code></pre>
+
+
+  </div>
+
+  <!-- 9. setTimeout -->
+  <div class="section-container" id="setTimeout">
+    <h2>setTimeout</h2>
+    <pre><code class="language-javascript">
+  
+      console.log('start')
+      setTimeout(() => {
+        console.log('ejecutando un setTimeOut')
+      }, 3000)
+      
+      let tempo = setTimeout(() => {
+        console.log(new Date().toLocaleTimeString())
+      },1000)
+      
+      clearTimeout(tempo)
+
+
+  </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+    start
+    ejecutando un setTimeOut
+  </code></pre>
+
+  </div>
+
+
+   <!-- 10. setInterval -->
+   <div class="section-container" id="setTimeout">
+    <h2>setInterval</h2>
+    <pre><code class="language-javascript">
+  
+      // variable to store our intervalID
+      let nIntervId;
+      
+      function changeColor() {
+        // check if an interval has already been set up
+        if (!nIntervId) {
+          nIntervId = setInterval(flashText, 1000);
+        }
+      }
+      
+      function flashText() {
+        const oElem = document.getElementById("my_box");
+        oElem.className = oElem.className === "go" ? "stop" : "go";
+      }
+      
+      function stopTextColor() {
+        clearInterval(nIntervId);
+        // release our intervalID from the variable
+        nIntervId = null;
+      }
+      
+      document.getElementById("start").addEventListener("click", changeColor);
+      document.getElementById("stop").addEventListener("click", stopTextColor);
+      
+      // Examples
+      
+      setInterval(() => {
+        console.log("ejecutando un setInterval cada de");
+      }, 1000);
+      
+      setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      });
+      
+      let interval = setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      });
+      
+      clearInterval(interval);
+      
+
+
+  </code></pre>
+  <h3>Console output</h3>
+  <pre><code class="language-javascript">
+    start
+    ejecutando un setTimeOut
+  </code></pre>
+
+  </div>
 
 
   <!-- Apply Method Example-->
@@ -437,9 +649,15 @@
   <!-- <script src="js/3.conditionals.examples.js"></script>
   <!-- <script src="js/4.for_example"></script> -->
   <!-- <script src="js/4.1.FOR_IN"></script> -->
+  <!-- <script src="js/6.rest.parameters.example.js"></script> -->
+  <!-- <script src="js/7.OOP_class.js"></script>
+  <script src="js/8.console.examples.js"></script> -->
+  <!-- <script src="js/9.setTimeout.js"></script> -->
+  <script src="js/10.setinterval_example.js"></script>
+<!--  -->
+
   <!-- <script src="js/2.console.examples.js"></script> -->
   <!-- <script src="js/7.apply.method.example.js"></script> -->
-  <script src="js/8.bind.method.example.js"></script>
 
 
 </body>
