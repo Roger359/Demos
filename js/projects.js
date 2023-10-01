@@ -247,4 +247,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/32.Random-meal-generator/script.js'
 
   },
+  {
+    title: "Catch the Insect",
+    description: "Vanilla JavaScript",
+    img: "/images/34.png",
+    src: "/34.Catch-the-insect",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/34.Catch-the-insect/script.js'
+
+  },
 ];
