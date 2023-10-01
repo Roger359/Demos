@@ -256,7 +256,7 @@ export const projects = [
 
   },
   {
-    title: "JavaScript Fundamentals Examples",
+    title: "JavaScript Fundamentals",
     description: "Vanilla JavaScript",
     img: "/images/35.png",
     src: "/35.Fundamentals",
