@@ -255,4 +255,12 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/34.Catch-the-insect/script.js'
 
   },
+  {
+    title: "JavaScript Fundamentals Examples",
+    description: "Vanilla JavaScript",
+    img: "/images/35.png",
+    src: "/35.Fundamentals",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/35.Fundamentals/script.js'
+
+  },
 ];
