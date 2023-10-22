@@ -1,5 +1,6 @@
 {
   "terminal.integrated.automationProfile.linux": {
     
-  }
+  },
+  "liveServer.settings.port": 5501
 }
