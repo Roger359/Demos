@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Fundamentals</title>
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- prims js stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <h1>JavaScript Fundamentals</h1>
+
+
+  <!-- Menu -->
+  <div class="container" id="menu">
+    <ul>
+      <li><a href="#oneLinearString">1. One Line String Methods</a></li>
+      <li><a href="#oneLinearArrays">2. One line Array Methods</a></li>
+      <li>
+        <a href="#conditionals">3. Conditionals</a>
+      </li>
+      <li><a href="#for">4. Loops: FOR</a></li>
+      <li>
+        <a href="#forin">4.1. Loops: FOR IN</a>
+      </li>
+      <li><a href="#trycatch">5. Exception: try...catch</a></li>
+      <li><a href="#rest">6. Rest Parameters</a></li>
+      <li><a href="#class">7. Class and Inheritance</a></li>
+      <li><a href="#console">8. Console Object</a></li>
+      <li><a href="#setTimeout">9. setTimeout</a></li>
+      <li><a href="#setInterval">10. setInterval</a></li>
+      <li><a href="#codeAsyncNoBlock">11. Codigo Async no-bloqueante</a></li>
+      <li><a href="#codeSyncBlock">12. Codigo Sync bloqueante</a></li>
+      <li><a href="#callbacks">13. Callbacks</a></li>
+      <li><a href="#promises">14. Promises</a></li>
+      <li><a href="#async-await">15. Async - Await</a></li>
+      <li><a href="#datatypeMap">16. Data type: Map</a></li>
+      <li><a href="#weaksMap-Sets">17. WeakSets - WeakMaps</a></li>
+      <li><a href="#iterator-iterable">18. Iterable - Iterator</a></li>
+      <li><a href="#generators">19. Generators</a></li>
+      <li><a href="#bind">8. Bind() Method</a></li>
+      <li><a href="#apply">7. Appy() Method</a></li>
+
+
+
+    </ul>
+
+
+  </div>
+
+  <!-- 1. One Linear String Methods-->
+  <div class="section-container" id="oneLinearString">
+    <h2> One Linear Examples</h2>
+    <pre><code class="language-javascript">
+
+    console.warn('----------Random Strings Example-----------')
+    // Random Strings
+    const randomString = Math.random().toString(36).slice(2);
+    console.info(randomString)
+    console.warn('----------Random Strings Example Example-----------')
+    
+    
+    console.warn('----------Extract Domain Name froam an Email Example-----------')
+    
+    // Extract Domain Name from an email
+    let email = 'roger.acosta@cpven.com'
+    let getDomain = email.substring(email.indexOf('@') + 1);
+    console.log(email)
+    console.log(getDomain)
+    
+    console.warn('----------Extract Domain Name froam an Email Example Example-----------')
+
+  </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+    ----------Random Strings Example-----------
+    l7a9409wtlo
+
+    ----------Extract Domain Name froam an Email Example-----------
+    roger.acosta@cpven.com
+    cpven.com
+  </code></pre>
+
+  </div>
+
+  <!-- 2. One Linear Arrays Examples-->
+  <div class="section-container" id="oneLinearArrays">
+    <h2> One linear Array Methods</h2>
+    <pre><code class="language-javascript">
+
+  console.warn('-----Check if an Array is Empty------')
+
+  // Check if an Array is Empty
+
+  let arr1 = [];
+  let arr2 = [1,2,3,4,5]
+
+  const isArr1Empty = !(Array.isArray(arr1) && arr1.length > 0)
+  const isArr2Empty = !(Array.isArray(arr2) && arr2.length > 0)
+
+  console.log(`Is Array 1 = "[${arr1}]" Empty: ${isArr1Empty}`);
+  console.log(`Is Array 2 + "[${arr2}]" Empty: ${isArr2Empty}`);
+
+  console.warn('-----Check if an Array is Empty END------')
+
+  console.info('--------Check if a Variable is an Array-----------')
+  // Check if a Variable is An Array
+
+  let city = 'Bogota'
+  let cities = ['Maracaibo','Bogota', 'Miami', 'Caracas']
+
+  const isArray = (arr) => Array.isArray(arr);
+
+  console.log(`City= "${city}" is an Array: ${isArray(city)}`) 
+  console.log(`Cities= "[${cities}]" is an Array: ${isArray(cities)}`) 
+
+  console.warn('--------Check if a Variable is an Array END-----------')
+
+  // calculate the timestamp of my life
+
+  //641711449
+  // let myBirthDay = date.toLocaleString()
+
+  // let date = Date.now()
+
+
+  console.log('--------Calculate the timestamp of my life ----------')
+
+  let myBirthDay = new Date(1990,4,3).toLocaleDateString()
+  let dateTimeStampCreation = new Date(1970,0,1).toLocaleDateString()
+
+
+  const toTimeStamp = (strDate) => {
+    const timeStamp = Date.parse(strDate)
+    return timeStamp / 1000
+  }
+
+  let timeStampBirthday = toTimeStamp(myBirthDay)
+  let firstTimeStamp = toTimeStamp(dateTimeStampCreation)
+
+  console.info('my birthday in timestamp')
+  console.log(timeStampBirthday)
+  console.log(myBirthDay)
+
+  console.info('the first timestamp of all time')
+  console.log(firstTimeStamp)
+  console.log(dateTimeStampCreation)
+
+
+  console.log('--------Calculate the timestamp of my life END ----------')
+
+</code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+
+  -----Check if an Array is Empty------
+  Is Array 1 = "[]" Empty: true
+  Is Array 2 + "[1,2,3,4,5]" Empty: false
+  -----Check if an Array is Empty END------
+
+  --------Check if a Variable is an Array-----------
+  City= "Bogota" is an Array: false
+  Cities= "[Maracaibo,Bogota,Miami,Caracas]" is an Array: true
+  --------Check if a Variable is an Array END-----------
+
+  --------Calculate the timestamp of my life ----------
+  my birthday in timestamp
+  641710800
+  5/3/1990
+  the first timestamp of all time
+  18000
+  1/1/1970
+  --------Calculate the timestamp of my life END ----------
+</code></pre>
+
+  </div>
+
+  <!-- 3. Conditional Section -->
+  <div class="section-container" id="conditionals">
+    <h2>Conditional Example #1 <span>If-else</span></h2>
+    <pre><code class="language-javascript">
+    
+      let hour = 19;
+
+      /* Let me sleep */
+      if(hour >= 0 && hour <= 5){
+      console.log('Let me sleep')
+      }
+      /* Good Morning 6 hrs -- 11 hrs */ 
+      else if(hour >=6 && hour <= 11){
+      console.log('Good Morning')
+      
+      /* Good Afternoon 12 hrs -- 18 hrs */ 
+      }else if(hour >= 12 && hour <= 18){
+      console.log('Good Afternoon')
+      
+      /* Good Evening 19 hrs -- 23 hrs */
+      }else{
+      console.log('Good Evening')
+      }
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      Good Evening
+    </code></pre>
+
+  </div>
+  <div class="section-container" id="conditionals">
+    <h2>Conditional Example #2 <span>Switch</span></h2>
+    <pre><code class="language-javascript">
+
+      let day = 5;
+
+      switch(day){
+      case 0:
+      console.log('Sunday') 
+      break;
+      case 1:
+      console.log('Monday') 
+      break;
+      case 2:
+      console.log('Tuesday') 
+      break;
+      case 3:
+      console.log('Wednesday') 
+      break;
+      case 4:
+      console.log('Thrusday') 
+      break;
+      case 5:
+      console.log('Friday') 
+      break;
+      case 6:
+      console.log('Saturday') 
+      break;
+      
+      default:
+      console.log('The day does not exist')
+      break;
+      }
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      Friday
+    </code></pre>
+
+
+
+  </div>
+
+  <!-- 4. For Example -->
+  <div class="section-container" id="for">
+    <h2> Loops: <span>FOR </span></h2>
+    <pre><code class="language-javascript">
+
+      `<form name="selectForm">
+        <label for="musicTypes"
+          >Choose some music types, then click the button below:</label
+        >
+        <select id="musicTypes" name="musicTypes" multiple>
+          <option selected>R&B</option>
+          <option>Jazz</option>
+          <option>Blues</option>
+          <option>New Age</option>
+          <option>Classical</option>
+          <option>Opera</option>
+        </select>
+        <button id="btn" type="button">How many are selected?</button>
+      </form>`
+
+      function countSelected(selectObject) {
+        let numberSelected = 0;
+        for (let i = 0; i < selectObject.options.length; i++) {
+          if (selectObject.options[i].selected) {
+            numberSelected++;
+          }
+        }
+        return numberSelected;
+      }
+      
+      const btn = document.getElementById("btn");
+      
+      btn.addEventListener("click", () => {
+        const musicTypes = document.selectForm.musicTypes;
+        
+        console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+      });
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      You have selected 2 option(s).
+    </code></pre>
+
+  </div>
+
+  <!-- 4.1. For in examples -->
+  <div class="section-container" id="forin">
+    <h2> Loops: <span>FOR IN Example</span></h2>
+    <pre><code class="language-javascript">
+
+      const myCar = {
+        make: "Ford",
+        model: "Mustang",
+        year: 1969,
+      };
+      
+      function dumpProps(objName) {
+        let result = "";
+      
+        for (const i in objName) {
+          // console.log(`Key: ${i}, Value: ${objName[i]} `)
+          result += `${objName}.${i} = ${objName[i]}<br>`;
+        }
+        result += "<hr>";
+        return result;
+      }
+      
+      console.log(dumpProps(myCar));
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      '[object Object].make = Ford<br>[object Object].model = Mustang<br>[object Object].year = 1969<br>'
+    </code></pre>
+
+  </div>
+
+  <!-- 5. try...catch -->
+  <div class="section-container" id="forin">
+    <h2> Exception: try...catch</h2>
+    <pre><code class="language-javascript">
+
+     
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+    </code></pre>
+
+  </div>
+
+  <!-- 6. Rest Parameter -->
+  <div class="section-container" id="rest">
+    <h2> Rest Parameter</h2>
+    <pre><code class="language-javascript">
+  
+      function sum(a, b, ...c) {
+        let result = a + b;
+        c.forEach(function (n) {
+          result += n;
+        });
+      
+        return result
+      }
+      
+      let newResult = sum(2,3)
+      let newResultWithSpread = sum(3,5,7)
+      console.log(newResult)
+      console.log(newResultWithSpread)
+  
+      </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      5
+      15
+    </code></pre>
+
+  </div>
+
+  <!-- 7. Class and Inheritance -->
+  <div class="section-container" id="class">
+    <h2> Rest Parameter</h2>
+    <pre><code class="language-javascript">
+  
+      class Animal {
+        constructor(name, genre) {
+          this.name = name;
+          this.genre = genre;
+        }
+      
+        /* Methods */
+        sound() {
+          console.log("I make sounds becasuse I am alive");
+        }
+        greet() {
+          console.log(`my name is ${this.name}`);
+        }
+      }
+      
+      /* inheritance in classes*/
+      class Dog extends Animal {
+        constructor(name, genre, size) {
+          /* call the constructuor of the father class*/
+          super(name, genre);
+          this.size = size;
+          this.breed = null;
+        }
+      
+        sound() {
+          console.log("Guauuu Guauuu!!");
+        }
+      
+        // a static methods can be executed whitout the need for an instance of the class
+        static whatYouAre() {
+          console.log("I am a dog, the best friend of the human be");
+        }
+      
+        /* the setters and getters are specials methods that allow us set and 
+        get the attribiutes values of our class*/
+      
+        get getBreed() {
+          return this.breed;
+        }
+      
+        set setBreed(breed) {
+          this.breed = breed;
+        }
+      }
+      
+      
+      Dog.whatYouAre(); // output: 'I am a dog, the best friend of the human be'
+      
+      //Instances of the class
+      
+      const mimi = new Animal("mimi", "female"),
+        scooby = new Dog("scooby", "male", "gigant");
+      
+      mimi.greet(); // --> output: 'My name is mimi'
+      scooby.sound(); // --> output: "Guauuu Guauuu!!"
+      scooby.setBreed = 'Chihuahua'
+      console.log(scooby.getBreed)
+      
+  
+      </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+      I am a dog, the best friend of the human be
+      my name is mimi
+      Guauuu Guauuu!!
+      Chihuahua
+    </code></pre>
+
+  </div>
+
+
+  <!-- 8. Console section -->
+  <div class="section-container" id="console">
+    <h2>Console Object Examples</h2>
+    <pre><code class="language-javascript">
+  
+    console.info('-------------Console Examples---------------')
+    console.warn('Warning example')
+    console.error('Error example')
+
+    console.log('-------Using console.time -----------')
+    console.time('how long does my code take to execute');
+
+    const array = Array(1000000)
+    for(let i = 0; i < array.length; i++){
+    array[i] = i 
+    }
+    console.timeEnd('how long does my code take to execute')
+
+    // console.assert() unit test
+    let x = 3,
+    y = 2,
+    testXY = "Waiting X variable always be minus than Y variable"
+
+    console.assert(x "less than" y,{x,y},testXY)
+
+    console.info('-------------Console Examples END---------------');
+
+
+  </code></pre>
+
+
+  </div>
+
+  <!-- 9. setTimeout -->
+  <div class="section-container" id="setTimeout">
+    <h2>setTimeout</h2>
+    <pre><code class="language-javascript">
+  
+      console.log('start')
+      setTimeout(() => {
+        console.log('ejecutando un setTimeOut')
+      }, 3000)
+      
+      let tempo = setTimeout(() => {
+        console.log(new Date().toLocaleTimeString())
+      },1000)
+      
+      clearTimeout(tempo)
+
+
+  </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+    start
+    ejecutando un setTimeOut
+  </code></pre>
+
+  </div>
+
+
+   <!-- 10. setInterval -->
+   <div class="section-container" id="setTimeout">
+    <h2>setInterval</h2>
+    <pre><code class="language-javascript">
+  
+      // variable to store our intervalID
+      let nIntervId;
+      
+      function changeColor() {
+        // check if an interval has already been set up
+        if (!nIntervId) {
+          nIntervId = setInterval(flashText, 1000);
+        }
+      }
+      
+      function flashText() {
+        const oElem = document.getElementById("my_box");
+        oElem.className = oElem.className === "go" ? "stop" : "go";
+      }
+      
+      function stopTextColor() {
+        clearInterval(nIntervId);
+        // release our intervalID from the variable
+        nIntervId = null;
+      }
+      
+      document.getElementById("start").addEventListener("click", changeColor);
+      document.getElementById("stop").addEventListener("click", stopTextColor);
+      
+      // Examples
+      
+      setInterval(() => {
+        console.log("ejecutando un setInterval cada de");
+      }, 1000);
+      
+      setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      });
+      
+      let interval = setInterval(() => {
+        console.log(new Date().toLocaleTimeString());
+      });
+      
+      clearInterval(interval);
+      
+
+
+  </code></pre>
+  <h3>Console output</h3>
+  <pre><code class="language-javascript">
+    start
+    ejecutando un setTimeOut
+  </code></pre>
+
+  </div>
+
+
+  <!-- Apply Method Example-->
+  <div class="section-container" id="apply">
+    <h2> Apply() Method Example</h2>
+    <pre><code class="language-javascript">
+
+      const numbers = [1, 2, 3];
+      const moreNumbers = [4, 5, 6];
+      
+      numbers.push.apply(numbers, moreNumbers);
+      
+      console.log(`Array 1 = "[${numbers}]" + Array 2 = "[${moreNumbers}]"`)
+      console.log(`Appended array: ${numbers}`);
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+
+      Array 1 = "[1,2,3,4,5,6]" + Array 2 = "[4,5,6]"
+      Appended array: 1,2,3,4,5,6
+  
+    </code></pre>
+
+  </div>
+
+  <!-- Bind Method Example-->
+  <div class="section-container" id="bind">
+    <h2> Bind() Method Example</h2>
+    <pre><code class="language-javascript">
+
+      let runner = {
+        name: "Runner",
+        run: function (speed) {
+          console.log(this.name + " " + "runs at" + " " + speed + "mph.");
+        },
+      };
+      
+      let flyer = {
+        name: "Flyer",
+        fly: function (speed) {
+          console.log(`${this.name} flies at ${speed} mph.`);
+        },
+      };
+      
+      let run = runner.run.bind(flyer, 20);
+      
+      run()
+
+    </code></pre>
+    <h3>Console output</h3>
+    <pre><code class="language-javascript">
+
+      Flyer runs at 20mph.
+  
+    </code></pre>
+
+  </div>
+
+
+  <!-- <div class="return-button">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div> -->
+
+
+
+  <!--Prim Js script file  -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <!-- font awesome script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="js/1.one_liners_string-methods"></script> -->
+  <!-- <script src="js/2.arrays_one_liners_methods"></script> -->
+  <!-- <script src="js/3.conditionals.examples.js"></script>
+  <!-- <script src="js/4.for_example"></script> -->
+  <!-- <script src="js/4.1.FOR_IN"></script> -->
+  <!-- <script src="js/6.rest.parameters.example.js"></script> -->
+  <!-- <script src="js/7.OOP_class.js"></script>
+  <script src="js/8.console.examples.js"></script> -->
+  <!-- <script src="js/9.setTimeout.js"></script> -->
+  <script src="js/10.setinterval_example.js"></script>
+<!--  -->
+
+  <!-- <script src="js/2.console.examples.js"></script> -->
+  <!-- <script src="js/7.apply.method.example.js"></script> -->
+
+
+</body>
+
+</html>
