@@ -1,5 +1,69 @@
 export const projects = [
   {
+    title: "Image Search App",
+    description: "Image Gallery using Unsplash API",
+    img: "/images/16.png",
+    src: "/16.ImageSearchApp",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/16.ImageSearchApp/script.js'
+
+  },
+  {
+    title: "Note App",
+    description: "Note App using localstorage to save data",
+    img: "/images/13.png",
+    src: "/13.NoteApp",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/13.NoteApp/script.js'
+
+  },
+  {
+    title: "Weather App",
+    description: "Using API:  https://openweathermap.org/api",
+    img: "/images/15.png",
+    src: "/15.Weather-App",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/15.Weather-App/script.js'
+
+  },
+  {
+    title: "Animated login UI",
+    description: "",
+    img: "/images/23.png",
+    src: "/23.Animated_Login_UI",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/23.Animated_Login_UI/script.js'
+
+  },
+  {
+    title: "Chatbot with AI",
+    description: "Chatbot using Open AI API",
+    img: "/images/30.png",
+    src: "/30.Chatbot",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/30.Chatbot/script.js'
+
+  },
+  {
+    title: "Dictonary",
+    description: "Dictonary using https://dictionaryapi.dev/",
+    img: "/images/25.png",
+    src: "/25.Dictionary",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/25.Dictionary/script.js'
+
+  },
+  {
+    title: "Recipe Book App",
+    description: "All kind of generators functions",
+    img: "/images/22.png",
+    src: "/22.Recipe-Book-App",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/22.Recipe-Book-App/script.js'
+
+  },
+  {
+    title: "DarkMode Toggle",
+    description: "All kind of generators functions",
+    img: "/images/24.png",
+    src: "/24.DarkModeToggle",
+    repohref: 'https://github.com/Roger359/Demos/blob/master/24.DarkModeToggle/script.js'
+
+  },
+  {
     title: "Functions App",
     description: "All kind of Beginner functions, working with text and inputs",
     img: "/images/1.png",
@@ -86,14 +150,7 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/12.BodyMassIndexCalculator/script.js'
 
   },
-  {
-    title: "Note App",
-    description: "Note App using localstorage to save data",
-    img: "/images/13.png",
-    src: "/13.NoteApp",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/13.NoteApp/script.js'
-
-  },
+ 
   {
     title: "Loan Calculator",
     description:
@@ -103,22 +160,8 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/14.Loan-Calculator/script.js'
 
   },
-  {
-    title: "Weather App",
-    description: "provide a national and local weather forecast for cities, using https://openweathermap.org/api",
-    img: "/images/15.png",
-    src: "/15.Weather-App",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/15.Weather-App/script.js'
-
-  },
-  {
-    title: "Image Search App",
-    description: "Image Gallery using Unsplash API",
-    img: "/images/16.png",
-    src: "/16.ImageSearchApp",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/16.ImageSearchApp/script.js'
-
-  },
+  
+ 
   {
     title: "Basic Calculator",
     description: "Basic arithmetic calculator",
@@ -159,38 +202,10 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/21.Dice-Roll-Simulator/script.js'
 
   },
-  {
-    title: "Recipe Book App",
-    description: "All kind of generators functions",
-    img: "/images/22.png",
-    src: "/22.Recipe-Book-App",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/22.Recipe-Book-App/script.js'
-
-  },
-  {
-    title: "Animated login UI",
-    description: "All kind of generators functions",
-    img: "/images/23.png",
-    src: "/23.Animated_Login_UI",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/23.Animated_Login_UI/script.js'
-
-  },
-  {
-    title: "DarkMode Toggle",
-    description: "All kind of generators functions",
-    img: "/images/24.png",
-    src: "/24.DarkModeToggle",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/24.DarkModeToggle/script.js'
-
-  },
-  {
-    title: "Dictonary",
-    description: "Dictonary using https://dictionaryapi.dev/",
-    img: "/images/25.png",
-    src: "/25.Dictionary",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/25.Dictionary/script.js'
-
-  },
+  
+  
+ 
+ 
   {
     title: "Survey Form",
     description: "freeCodeCamp survey form exercise",
@@ -223,14 +238,7 @@ export const projects = [
     repohref: 'https://github.com/Roger359/Demos/blob/master/29.Image-Slider/script.js'
 
   },
-  {
-    title: "Chatbot with AI",
-    description: "Chatbot using Open AI API",
-    img: "/images/30.png",
-    src: "/30.Chatbot",
-    repohref: 'https://github.com/Roger359/Demos/blob/master/30.Chatbot/script.js'
-
-  },
+ 
   {
     title: "Random Password Generator",
     description: "Random Password using a local char string",
