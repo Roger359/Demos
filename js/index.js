@@ -63,4 +63,5 @@ for (let i = 0; i < projects.length; i++) {
   divContainer.appendChild(demoDiv);
 
   grid.appendChild(divContainer);
+  
 }
